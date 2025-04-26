@@ -1,10 +1,12 @@
 "use client"
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
+  const heroSectionRef = useRef<HTMLElement>(null);
   
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -13,14 +15,24 @@ export default function Home() {
   // Handle scroll events to change header style
   useEffect(() => {
     const handleScroll = () => {
+      // Check if scrolled down
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
+      
+      // Check if past hero section
+      if (heroSectionRef.current) {
+        const heroBottom = heroSectionRef.current.offsetTop + heroSectionRef.current.offsetHeight;
+        setPastHero(window.scrollY > heroBottom - 100); // 100px before end of hero
+      }
     };
     
     window.addEventListener('scroll', handleScroll);
+    // Trigger once on mount to set initial state
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -28,9 +40,13 @@ export default function Home() {
   
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
-      {/* Sticky Header - changes background on scroll */}
-      <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 transition-all duration-300 ${
-        scrolled ? 'bg-gray-900/95 shadow-lg backdrop-blur-sm py-3' : 'bg-transparent py-6'
+      {/* Sticky Header - transparent on hero, solid elsewhere */}
+      <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 transition-all duration-300 ${
+        pastHero 
+          ? 'bg-gray-900 shadow-lg py-3' // Past hero, always solid
+          : scrolled 
+            ? 'backdrop-blur-sm bg-black/20 shadow-lg py-3' // In hero but scrolled - just blur with minimal opacity
+            : 'bg-transparent py-6' // At top of hero, fully transparent
       }`}>
         <div className="text-3xl font-[var(--font-playfair)] text-white font-bold">
           <h1>Ayp Financial</h1>
@@ -47,8 +63,8 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <main className="flex-grow pt-24">
-        <section className="relative h-screen w-full">
+      <main className="flex-grow">
+        <section ref={heroSectionRef} className="relative h-screen w-full">
           {/* Background image */}
           <div className="absolute inset-0 overflow-hidden">
             <Image 
@@ -78,7 +94,7 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-5 py-4 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg text-gray-700 font-medium border-0"
+                className="flex-grow px-5 py-4 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg text-gray-800 font-medium border-0 bg-white/90 placeholder-gray-500"
               />
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-r-lg transition-all shadow-lg hover:shadow-xl">
                 Sign up
@@ -720,7 +736,7 @@ export default function Home() {
                   <input 
                     type="email" 
                     placeholder="Enter your email" 
-                    className="flex-grow px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-l-md"
+                    className="flex-grow px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white-500 rounded-l-md"
                   />
                   <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-r-md transition-colors">
                     Subscribe
