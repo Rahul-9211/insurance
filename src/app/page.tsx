@@ -48,8 +48,30 @@ export default function Home() {
             ? 'backdrop-blur-sm bg-black/20 shadow-lg py-3' // In hero but scrolled - just blur with minimal opacity
             : 'bg-transparent py-6' // At top of hero, fully transparent
       }`}>
-        <div className="text-3xl font-[var(--font-playfair)] text-white font-bold">
-          <h1>Ayp Financial</h1>
+        <div className="flex items-center">
+          <div className="h-12 w-auto relative">
+            <svg width="200" height="40" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" className="fill-current">
+              {/* AYP Boxes */}
+              <rect x="20" y="30" width="60" height="60" rx="5" fill="#111" />
+              <rect x="90" y="30" width="60" height="60" rx="5" fill="#a81c1c" />
+              <rect x="160" y="30" width="60" height="60" rx="5" fill="#111" />
+              
+              {/* AYP Letters */}
+              <text x="40" y="75" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">A</text>
+              <text x="120" y="75" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">Y</text>
+              <text x="190" y="75" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">P</text>
+              
+              {/* Vertical line */}
+              <line x1="240" y1="30" x2="240" y2="90" stroke={scrolled || pastHero ? "#fff" : "#111"} strokeWidth="2" />
+              
+              {/* FINANCE SOLUTIONS text */}
+              <text x="250" y="50" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill={scrolled || pastHero ? "#fff" : "#111"}>FINANCE</text>
+              <text x="250" y="85" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="#a81c1c">SOLUTIONS</text>
+              
+              {/* Tagline */}
+              <text x="250" y="105" fontFamily="Arial, sans-serif" fontSize="12" fill={scrolled || pastHero ? "#fff" : "#111"}>SOLUTIONS YOU CAN BANK ON</text>
+            </svg>
+          </div>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#about" className="text-white hover:text-gray-300 font-medium">About Us</a>

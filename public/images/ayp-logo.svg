@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- AYP Boxes -->
+  <rect x="20" y="30" width="60" height="60" rx="5" fill="#111" />
+  <rect x="90" y="30" width="60" height="60" rx="5" fill="#a81c1c" />
+  <rect x="160" y="30" width="60" height="60" rx="5" fill="#111" />
+  
+  <!-- AYP Letters -->
+  <text x="40" y="75" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">A</text>
+  <text x="120" y="75" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">Y</text>
+  <text x="190" y="75" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">P</text>
+  
+  <!-- Vertical line -->
+  <line x1="240" y1="30" x2="240" y2="90" stroke="#111" stroke-width="2" />
+  
+  <!-- FINANCE SOLUTIONS text -->
+  <text x="250" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#111">FINANCE</text>
+  <text x="250" y="85" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#a81c1c">SOLUTIONS</text>
+  
+  <!-- Tagline -->
+  <text x="250" y="105" font-family="Arial, sans-serif" font-size="12" fill="#111">SOLUTIONS YOU CAN BANK ON</text>
+</svg>
