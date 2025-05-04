@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -106,10 +107,11 @@ export default function Home() {
             </h2>
             
             <p className="text-white max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
-              Ayp Financial Solutions simplifies access to car loans, personal loans, business loans,
-              home loans, and credit cards. We connect you with leading financial institutions,
-              providing expert guidance and a seamless application process. Let us help you
-              achieve your financial goals with transparent and personalized service.
+              AYP Financial Solutions offers streamlined access to a wide range of financial products, 
+              including car loans, personal loans, business loans, home loans, and credit cards. 
+              We partner with top-tier financial institutions to deliver expert advice and 
+              facilitate a seamless application process. Our commitment is to provide personalized, 
+              transparent service to help you achieve your financial objectives.
             </p>
             
             <div className="flex w-full max-w-md mx-auto">
@@ -133,7 +135,7 @@ export default function Home() {
               <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
                 <Image 
                   src="/team-meeting.jpg"
-                  alt="Team meeting at Ayp Financial"
+                  alt="Team meeting at AYP Financial"
                   fill
                   className="object-cover object-center"
                 />
@@ -146,10 +148,10 @@ export default function Home() {
                 </h2>
                 
                 <p className="text-gray-700 text-lg mb-10 leading-relaxed">
-                  At Ayp Financial Solutions, we are committed to transparency,
-                  efficiency, and personalized service. Our mission is to empower clients
-                  to achieve their financial goals through expert guidance and tailored
-                  solutions.
+                  At AYP Finance Solutions, we focus on transparency, efficiency, and personalized service. 
+                  Our goal is to help clients achieve their financial objectives by providing expert 
+                  advice and customized solutions. We partner with top-tier financial institutions to deliver 
+                  expert advice and facilitate a seamless application process.
                 </p>
                 
                 {/* Statistics Grid */}
@@ -200,7 +202,7 @@ export default function Home() {
               
               <div>
                 <p className="text-lg leading-relaxed text-gray-300">
-                  At Ayp Financial Solutions, we understand that everyone's financial
+                  At AYP Financial Solutions, we understand that everyone's financial
                   needs are unique. That's why we offer a comprehensive range of
                   loan products to suit various requirements. Whether you're looking
                   to purchase a new car, fund your personal goals, or expand your
@@ -211,7 +213,7 @@ export default function Home() {
             </div>
             
             {/* Loan Types Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Car Loans */}
               <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
                 <div className="relative h-64">
@@ -232,12 +234,12 @@ export default function Home() {
                     Drive away in your dream car with our flexible financing options. 
                     We offer competitive rates, quick approval processes, and personalized terms.
                   </p>
-                  <a href="#" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                  <Link href="/services/car-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
                     Learn more 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               
@@ -245,14 +247,14 @@ export default function Home() {
               <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
                 <div className="relative h-64">
                   <Image
-                    src="/loans/home-loan.jpg"
-                    alt="Personal and Home Loans"
+                    src="/loans/personal-loan.jpg"
+                    alt="Personal Loans"
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full p-6">
-                    <h3 className="text-2xl font-bold">Personal & Home Loans</h3>
+                    <h3 className="text-2xl font-bold">Personal Loans</h3>
                     <p className="mt-2 text-blue-300">Flexible terms, low interest rates</p>
                   </div>
                 </div>
@@ -261,12 +263,12 @@ export default function Home() {
                     Get the funds you need for life's big moments. From home renovations 
                     to debt consolidation, our personal loans offer flexibility and peace of mind.
                   </p>
-                  <a href="#" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                  <Link href="/services/personal-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
                     Learn more 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               
@@ -290,12 +292,41 @@ export default function Home() {
                     Fuel your business growth with our specialized financing solutions. 
                     From startups to established enterprises, we provide the capital you need to thrive.
                   </p>
-                  <a href="#" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                  <Link href="/services/business-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
                     Learn more 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
-                  </a>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Insurance */}
+              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                <div className="relative h-64">
+                  <Image
+                    src="/loans/insurance.jpg"
+                    alt="Insurance Solutions"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold">Insurance</h3>
+                    <p className="mt-2 text-blue-300">Comprehensive protection plans</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-300 mb-4">
+                    Protect what matters most with our range of insurance options. From life and health to property 
+                    and auto, we offer customized coverage to give you peace of mind.
+                  </p>
+                  <Link href="/services/insurance" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                    Learn more 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -404,6 +435,90 @@ export default function Home() {
           </div>
         </section>
         
+        {/* Advanced Financial Tools Section */}
+        <section className="py-20 bg-blue-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 font-[var(--font-playfair)]">
+                Advanced Financial Tools & Features
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Our suite of innovative, user-friendly tools simplifies your financial journey,
+                making it more efficient, personalized, and insightful.
+              </p>
+            </div>
+            
+            {/* Tools Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Tool 1 */}
+              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                <div className="text-blue-600 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Interactive Loan Calculator
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Easily calculate your loan payments and find out how much you can afford with our intuitive calculators.
+                </p>
+              </div>
+              
+              {/* Tool 2 */}
+              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                <div className="text-blue-600 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Personalized Loan Matching
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Our AI-powered tool analyzes your financial profile and recommends the best loan options for your needs.
+                </p>
+              </div>
+              
+              {/* Tool 3 */}
+              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                <div className="text-blue-600 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  E-Document Processing
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Streamline your loan application by uploading documents online and signing agreements electronically.
+                </p>
+              </div>
+              
+              {/* Tool 4 */}
+              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
+                <div className="text-blue-600 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Financial Health Score
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Take charge of your financial future with our assessment tool that evaluates your overall financial well-being.
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-12 text-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors shadow-lg">
+                Explore All Tools
+              </button>
+            </div>
+          </div>
+        </section>
+        
         {/* Testimonials Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-6">
@@ -444,7 +559,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "Ayp Financial made the home loan process incredibly easy. Their team guided me 
+                    "AYP Financial made the home loan process incredibly easy. Their team guided me 
                     through every step and found me the best rates available. I couldn't be happier 
                     with the service I received."
                   </p>
@@ -477,7 +592,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "The financial planning services at Ayp have transformed my approach to personal 
+                    "The financial planning services at AYP have transformed my approach to personal 
                     finance. Their expert team helped me create a comprehensive plan that's already 
                     showing results. Highly recommended!"
                   </p>
@@ -510,7 +625,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "I needed a business loan to expand my company, and Ayp Financial delivered beyond 
+                    "I needed a business loan to expand my company, and AYP Financial delivered beyond 
                     my expectations. They found a solution that perfectly matched my needs with terms 
                     I couldn't find elsewhere."
                   </p>
@@ -734,11 +849,10 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Loans</h3>
                 <ul className="space-y-3">
-                  <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Car Loans</a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Personal Loans</a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Business Loans</a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Home Loans</a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Credit Cards</a></li>
+                  <li><Link href="/services/car-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Car Loans</Link></li>
+                  <li><Link href="/services/personal-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Personal Loans</Link></li>
+                  <li><Link href="/services/business-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Business Loans</Link></li>
+                  <li><Link href="/services/insurance" className="text-gray-600 hover:text-blue-600 transition-colors">Insurance</Link></li>
                 </ul>
               </div>
               
@@ -773,7 +887,7 @@ export default function Home() {
             {/* Bottom Footer */}
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-600 text-sm mb-4 md:mb-0">
-                © 2025 Ayp Financial Solutions. All rights reserved.
+                © 2025 AYP Financial Solutions. All rights reserved.
               </div>
               
               <div className="flex items-center space-x-8">
