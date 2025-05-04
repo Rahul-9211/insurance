@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Header from "./components/Header";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -41,49 +42,8 @@ export default function Home() {
   
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
-      {/* Sticky Header - transparent on hero, solid elsewhere */}
-      <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 transition-all duration-300 ${
-        pastHero 
-          ? 'bg-gray-900 shadow-lg py-3' // Past hero, always solid
-          : scrolled 
-            ? 'backdrop-blur-sm bg-black/20 shadow-lg py-3' // In hero but scrolled - just blur with minimal opacity
-            : 'bg-transparent py-6' // At top of hero, fully transparent
-      }`}>
-        <div className="flex items-center">
-          <div className="h-12 w-auto relative">
-            <svg width="200" height="40" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" className="fill-current">
-              {/* AYP Boxes */}
-              <rect x="20" y="30" width="60" height="60" rx="5" fill="#111" />
-              <rect x="90" y="30" width="60" height="60" rx="5" fill="#a81c1c" />
-              <rect x="160" y="30" width="60" height="60" rx="5" fill="#111" />
-              
-              {/* AYP Letters */}
-              <text x="40" y="75" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">A</text>
-              <text x="120" y="75" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">Y</text>
-              <text x="190" y="75" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">P</text>
-              
-              {/* Vertical line */}
-              <line x1="240" y1="30" x2="240" y2="90" stroke={scrolled || pastHero ? "#fff" : "#111"} strokeWidth="2" />
-              
-              {/* FINANCE SOLUTIONS text */}
-              <text x="250" y="50" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill={scrolled || pastHero ? "#fff" : "#111"}>FINANCE</text>
-              <text x="250" y="85" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="#a81c1c">SOLUTIONS</text>
-              
-              {/* Tagline */}
-              <text x="250" y="105" fontFamily="Arial, sans-serif" fontSize="12" fill={scrolled || pastHero ? "#fff" : "#111"}>SOLUTIONS YOU CAN BANK ON</text>
-            </svg>
-          </div>
-        </div>
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="text-white hover:text-gray-300 font-medium">About Us</a>
-          <a href="#services" className="text-white hover:text-gray-300 font-medium">Services</a>
-          <a href="#contact" className="text-white hover:text-gray-300 font-medium">Contact Us</a>
-          <a href="#faq" className="text-white hover:text-gray-300 font-medium">FAQ</a>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-7 rounded-md transition-all shadow-lg hover:shadow-xl">
-            Get Started
-          </button>
-        </nav>
-      </header>
+      {/* Replace the old header with our new component */}
+      <Header transparent={true} />
 
       {/* Hero Section */}
       <main className="flex-grow">
@@ -891,10 +851,10 @@ export default function Home() {
               </div>
               
               <div className="flex items-center space-x-8">
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm">Terms and Conditions</a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm">Privacy Policy</a>
+                <Link href="/terms" className="text-gray-600 hover:text-blue-600 text-sm">Terms and Conditions</Link>
+                <Link href="/privacy" className="text-gray-600 hover:text-blue-600 text-sm">Privacy Policy</Link>
                 
-                <div className="flex space-x-4">
+                {/* <div className="flex space-x-4">
                   <a href="#" className="text-gray-600 hover:text-blue-600" aria-label="Facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
@@ -905,7 +865,7 @@ export default function Home() {
                       <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
                     </svg>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

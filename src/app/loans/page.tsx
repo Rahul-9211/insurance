@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Header from "../components/Header";
 
 // Component that uses the search params
 function LoansContent() {
@@ -142,8 +143,11 @@ function LoansContent() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Add Header component */}
+      <Header />
+      
       {/* Hero Banner */}
-      <div className="relative h-[40vh] bg-gray-900">
+      <div className="relative h-[40vh] bg-gray-900 mt-20">
         <Image 
           src={activeLoan.image}
           alt={`${activeLoan.title} banner`}

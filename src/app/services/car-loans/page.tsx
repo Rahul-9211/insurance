@@ -1,12 +1,16 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../../components/Header";
 
 export default function CarLoansPage() {
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
+      {/* Add Header component */}
+      <Header />
+      
       {/* Header with Background */}
-      <div className="relative h-[40vh] w-full">
+      <div className="relative h-[40vh] w-full mt-16">
         <Image 
           src="/loans/car-loan.jpg" 
           alt="Car Loans"
