@@ -1,12 +1,17 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function InsurancePage() {
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
+      {/* Add Header component */}
+      <Header />
+
       {/* Header with Background */}
-      <div className="relative h-[40vh] w-full">
+      <div className="relative h-[40vh] w-full mt-16">
         <Image 
           src="/loans/insurance.jpg" 
           alt="Insurance Solutions"
@@ -263,11 +268,14 @@ export default function InsurancePage() {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Let us help you find the right insurance coverage to give you peace of mind and security in every aspect of life. Contact us today to explore your insurance options and start safeguarding your future.
           </p>
-          <Link href="/#contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
+          <Link href="/contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
             Contact Us Today
           </Link>
         </div>
       </section>
+
+      {/* Add Footer at the end */}
+      <Footer />
     </div>
   );
 } 

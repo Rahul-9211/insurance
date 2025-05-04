@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function CarLoansPage() {
   return (
@@ -264,7 +265,7 @@ export default function CarLoansPage() {
           </div>
         </div>
       </main>
-
+      
       {/* CTA Section */}
       <section className="bg-blue-600 py-12 text-white">
         <div className="container mx-auto px-6 md:px-12 text-center">
@@ -272,11 +273,13 @@ export default function CarLoansPage() {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Our team is ready to help you find the perfect car loan solution for your needs.
           </p>
-          <Link href="/#contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
+          <Link href="/contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
             Contact Us Today
           </Link>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

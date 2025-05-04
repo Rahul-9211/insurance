@@ -1,12 +1,17 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function PersonalLoansPage() {
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
+      {/* Add Header component */}
+      <Header />
+      
       {/* Header with Background */}
-      <div className="relative h-[40vh] w-full">
+      <div className="relative h-[40vh] w-full mt-16">
         <Image 
           src="/loans/personal-loan.jpg" 
           alt="Personal Loans"
@@ -277,15 +282,17 @@ export default function PersonalLoansPage() {
       {/* CTA Section */}
       <section className="bg-blue-600 py-12 text-white">
         <div className="container mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-3xl font-bold mb-4 font-[var(--font-playfair)]">Ready to Make Your Financial Goals a Reality?</h2>
+          <h2 className="text-3xl font-bold mb-4 font-[var(--font-playfair)]">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Don't let financial barriers hold you back from reaching your goals. Contact us today to discuss your loan options.
+            Our team is ready to help you find the perfect personal loan solution for your needs.
           </p>
-          <Link href="/#contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
+          <Link href="/contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
             Contact Us Today
           </Link>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 } 

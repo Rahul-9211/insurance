@@ -1,12 +1,17 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function HomeLoansPage() {
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
+      {/* Add Header component */}
+      <Header />
+
       {/* Header with Background */}
-      <div className="relative h-[40vh] w-full">
+      <div className="relative h-[40vh] w-full mt-16">
         <Image 
           src="/loans/home-loan.jpg" 
           alt="Home Loans"
@@ -268,7 +273,7 @@ export default function HomeLoansPage() {
             Our mortgage specialists are ready to help you find the perfect home loan solution tailored to your unique needs and financial goals.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/#contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
+            <Link href="/contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
               Contact Us Today
             </Link>
             <Link href="/tools/mortgage-calculator" className="inline-block bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
@@ -277,6 +282,9 @@ export default function HomeLoansPage() {
           </div>
         </div>
       </section>
+
+      {/* Add Footer at the end */}
+      <Footer />
     </div>
   );
 } 

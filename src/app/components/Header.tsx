@@ -99,7 +99,7 @@ export default function Header({ transparent = false }: HeaderProps) {
           </div>
         </div>
         
-        <Link href="/#faq" className="text-white hover:text-gray-300 font-medium">FAQ</Link>
+        {/* <Link href="/#faq" className="text-white hover:text-gray-300 font-medium">FAQ</Link> */}
         <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-7 rounded-md transition-all shadow-lg hover:shadow-xl">
           Contact Us
         </Link>

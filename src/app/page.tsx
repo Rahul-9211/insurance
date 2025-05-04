@@ -74,15 +74,13 @@ export default function Home() {
               transparent service to help you achieve your financial objectives.
             </p>
             
-            <div className="flex w-full max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-grow px-5 py-4 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg text-gray-800 font-medium border-0 bg-white/90 placeholder-gray-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-r-lg transition-all shadow-lg hover:shadow-xl">
-                Sign up
-              </button>
+            <div className="flex w-full max-w-xs mx-auto">
+              <Link 
+                href="/contact" 
+                className="w-full  bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl text-center"
+              >
+                Contact Us Today
+              </Link>
             </div>
           </div>
         </section>

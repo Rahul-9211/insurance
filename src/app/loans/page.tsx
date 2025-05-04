@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 // Component that uses the search params
 function LoansContent() {
@@ -309,6 +310,7 @@ export default function LoansPage() {
   return (
     <Suspense fallback={<LoadingLoanPage />}>
       <LoansContent />
+      <Footer />
     </Suspense>
   );
 } 

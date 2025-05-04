@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Header from "../components/Header";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 
 export default function ContactPage() {
   return (
@@ -132,6 +133,7 @@ export default function ContactPage() {
           <p className="text-gray-500 mt-2">123 Financial Way, Los Angeles, CA 90001</p>
         </div>
       </section>
+      <Footer />
     </div>
   );
 } 
