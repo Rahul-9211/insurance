@@ -1,10 +1,11 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function LoansPage() {
+// Component that uses the search params
+function LoansContent() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -284,5 +285,26 @@ export default function LoansPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Loading fallback component 
+function LoadingLoanPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mx-auto"></div>
+        <p className="mt-4 text-gray-700">Loading loan information...</p>
+      </div>
+    </div>
+  );
+}
+
+// Main component that wraps with Suspense
+export default function LoansPage() {
+  return (
+    <Suspense fallback={<LoadingLoanPage />}>
+      <LoansContent />
+    </Suspense>
   );
 } 
