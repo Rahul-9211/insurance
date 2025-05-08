@@ -123,7 +123,7 @@ export default function ContactPage() {
       </main>
 
       {/* Google Map */}
-      <section className="h-96 w-full bg-gray-200 relative">
+      {/* <section className="h-96 w-full bg-gray-200 relative">
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-blue-50 border border-blue-200">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -132,7 +132,7 @@ export default function ContactPage() {
           <p className="text-gray-600 font-medium">Interactive Map Coming Soon</p>
           <p className="text-gray-500 mt-2">123 Financial Way, Los Angeles, CA 90001</p>
         </div>
-      </section>
+      </section> */}
       <Footer />
     </div>
   );

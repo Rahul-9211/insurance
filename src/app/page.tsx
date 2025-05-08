@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-[var(--font-montserrat)]">
       {/* Replace the old header with our new component */}
-      <Header transparent={true} />
+      <Header />
 
       {/* Hero Section */}
       <main className="flex-grow">
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 to-gray-900/90 z-10"></div>
           </div>
           
-          <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+          <div className="relative z-10 flex flex-col items-center justify-center h-full pt-8 sm:px-4 text-center">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 font-[var(--font-playfair)]">
               Your Gateway to<br />
               <span className="border-b-4 border-white pb-2">Financial Solutions</span>
@@ -263,7 +263,7 @@ export default function Home() {
               <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
                 <div className="relative h-64">
                   <Image
-                    src="/loans/insurance.jpg"
+                    src="/images/insurance.jpeg"
                     alt="Insurance Solutions"
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -305,7 +305,7 @@ export default function Home() {
             </div>
             
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 max-w-3xl mx-auto">
               {/* Service 1 */}
               <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="relative h-60">
@@ -409,61 +409,83 @@ export default function Home() {
             {/* Tools Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Tool 1 */}
-              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
-                <div className="text-blue-600 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-b-4 border-blue-600 group hover:-translate-y-1">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="bg-blue-100 group-hover:bg-blue-200 transition p-4 rounded-full shadow-md">
+                    {/* Calculator Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" fill="white" />
+                      <rect x="8" y="6" width="8" height="2" rx="1" fill="#3b82f6" />
+                      <circle cx="9" cy="12" r="1" fill="#3b82f6" />
+                      <circle cx="12" cy="12" r="1" fill="#3b82f6" />
+                      <circle cx="15" cy="12" r="1" fill="#3b82f6" />
+                      <circle cx="9" cy="15" r="1" fill="#3b82f6" />
+                      <circle cx="12" cy="15" r="1" fill="#3b82f6" />
+                      <circle cx="15" cy="15" r="1" fill="#3b82f6" />
+                    </svg>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   Interactive Loan Calculator
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-center">
                   Easily calculate your loan payments and find out how much you can afford with our intuitive calculators.
                 </p>
               </div>
               
               {/* Tool 2 */}
-              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
-                <div className="text-blue-600 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
+              <div className="bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-b-4 border-blue-600 group hover:-translate-y-1">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="bg-blue-100 group-hover:bg-blue-200 transition p-4 rounded-full shadow-md">
+                    {/* Sparkles Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.343 17.657l-1.414 1.414M17.657 17.657l-1.414-1.414M6.343 6.343L4.929 4.929" />
+                      <circle cx="12" cy="12" r="4" fill="#3b82f6" />
+                    </svg>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   Personalized Loan Matching
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-center">
                   Our AI-powered tool analyzes your financial profile and recommends the best loan options for your needs.
                 </p>
               </div>
               
               {/* Tool 3 */}
-              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
-                <div className="text-blue-600 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-b-4 border-blue-600 group hover:-translate-y-1">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="bg-blue-100 group-hover:bg-blue-200 transition p-4 rounded-full shadow-md">
+                    {/* FileText Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" fill="white" />
+                      <rect x="8" y="8" width="8" height="2" rx="1" fill="#3b82f6" />
+                      <rect x="8" y="12" width="5" height="2" rx="1" fill="#3b82f6" />
+                    </svg>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   E-Document Processing
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-center">
                   Streamline your loan application by uploading documents online and signing agreements electronically.
                 </p>
               </div>
               
               {/* Tool 4 */}
-              <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
-                <div className="text-blue-600 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
+              <div className="bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-b-4 border-blue-600 group hover:-translate-y-1">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="bg-blue-100 group-hover:bg-blue-200 transition p-4 rounded-full shadow-md">
+                    {/* TrendingUp Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 17l6-6 4 4 8-8" />
+                    </svg>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   Financial Health Score
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-center">
                   Take charge of your financial future with our assessment tool that evaluates your overall financial well-being.
                 </p>
               </div>
@@ -620,8 +642,10 @@ export default function Home() {
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-4 rounded-full bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    {/* Modern Envelope Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="3" y="5" width="18" height="14" rx="2" fill="white" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M3 7l9 6 9-6" stroke="#3b82f6" strokeWidth="1.5" fill="none" />
                     </svg>
                   </div>
                 </div>
@@ -641,8 +665,9 @@ export default function Home() {
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-4 rounded-full bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    {/* Modern Phone Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                 </div>
@@ -660,9 +685,10 @@ export default function Home() {
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-4 rounded-full bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    {/* Modern MapPin Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 21c-4.418 0-8-4.03-8-9a8 8 0 1116 0c0 4.97-3.582 9-8 9z" fill="white" />
+                      <circle cx="12" cy="12" r="3" fill="#3b82f6" />
                     </svg>
                   </div>
                 </div>

@@ -214,18 +214,14 @@ export default function CarLoansPage() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Table of Contents</h3>
-                <nav className="space-y-2">
-                  <a href="#why-choose" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-blue-600 pl-3">
-                    Why Choose Our Car Loans?
-                  </a>
-                  <a href="#loan-options" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    Our Car Loan Options
-                  </a>
-                  <a href="#how-it-works" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    How It Works
-                  </a>
-                </nav>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents</h3>
+                <ul className="space-y-3 text-gray-800">
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Identity Proof (Aadhaar, Passport, etc.)</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Address Proof (Utility Bill, Rent Agreement, etc.)</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Income Proof (Salary Slips, Bank Statements)</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Car Quotation/Invoice</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Passport Size Photographs</li>
+                </ul>
                 
                 <div className="mt-8 pt-6 border-t border-gray-300">
                   <h4 className="font-semibold text-gray-900 mb-2">Need Assistance?</h4>

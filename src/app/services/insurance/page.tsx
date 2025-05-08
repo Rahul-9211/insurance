@@ -189,7 +189,7 @@ export default function InsurancePage() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Table of Contents</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents</h3>
                 <nav className="space-y-2">
                   <a href="#offerings" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-blue-600 pl-3">
                     Our Insurance Offerings
