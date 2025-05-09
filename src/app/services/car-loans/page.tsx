@@ -213,7 +213,7 @@ export default function CarLoansPage() {
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents - Salaried Individuals</h3>
                 <ul className="space-y-3 text-gray-800">
-                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Crad</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>
                   <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
                   <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Latest Electricity Bill</li>
                   <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> 3 months salary slip</li>
