@@ -811,7 +811,7 @@ export default function Home() {
                   <li><a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About Us</a></li>
                   <li><a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</a></li>
                   {/* <li><a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a></li> */}
-                  <li><a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li>
+                  {/* <li><a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li> */}
                 </ul>
               </div>
               
