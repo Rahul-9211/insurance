@@ -683,8 +683,8 @@ export default function Home() {
                 <p className="text-gray-600 mb-3">
                   We are located at
                 </p>
-                <p className="text-blue-600 font-medium">
-                  123 Financial Way, Los Angeles, CA 90001, United States
+                <<p className="text-blue-600 font-medium">
+                  SCO No 46, M3M Galleria Market, Sector 113, Dwarka Expressway
                 </p>
                 
               </div>
