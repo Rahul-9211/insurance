@@ -24,7 +24,7 @@ export default function CarLoansPage() {
         <div className="relative z-20 flex flex-col h-full w-full justify-center px-6 md:px-12">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-[var(--font-playfair)]">
-              Car Loans
+              New & Used Car Loan
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
               Fast Approvals, Competitive Rates, and Flexible Financing
@@ -55,17 +55,14 @@ export default function CarLoansPage() {
             {/* Main Content Column */}
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-[var(--font-playfair)]">
-                Car Loans at AYP Finance Solutions
+                New & Used Car Loan
               </h2>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                At AYP Finance Solutions, we understand that purchasing a car is an exciting and significant milestone. 
-                Whether you're buying your first car, upgrading to a newer model, or refinancing your existing loan, 
-                we're here to help make your car ownership dreams a reality. Our car loan options are designed to provide 
-                you with the financial flexibility and support you need throughout the entire process.
+                At AYP Finance Solutions, we understand that purchasing a car - whether new or used, is an exciting and significant milestone. Whether you're buying your first vehicle, upgrading to a newer model, opting for a reliable pre-owned car, or refinancing your existing loan, we're here to help make your car ownership dreams a reality. Our car loan options are designed to provide you with the financial flexibility and support you need throughout the entire process.
               </p>
 
-              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Our Car Loans?</h3>
+              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Us?</h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
