@@ -109,9 +109,9 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-8">
                   {/* Stat 1 */}
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">1300+</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-2">2753</h3>
                     <p className="text-xl font-medium text-gray-800 mb-1">clients served</p>
-                    <p className="text-gray-600">We have successfully assisted over 1300+ clients in achieving their financial dreams.</p>
+                    <p className="text-gray-600">We have successfully assisted over 2753 clients in achieving their financial dreams.</p>
                   </div>
                   
                   {/* Stat 2 */}
@@ -123,9 +123,9 @@ export default function Home() {
                   
                   {/* Stat 3 */}
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">7</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-2">9</h3>
                     <p className="text-xl font-medium text-gray-800 mb-1">years</p>
-                    <p className="text-gray-600">With a combined experience of 7 years in financial services.</p>
+                    <p className="text-gray-600">With a combined experience of 9 years in financial services.</p>
                   </div>
                   
                   {/* Stat 4 */}
@@ -200,7 +200,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full p-6">
-                    <h3 className="text-2xl font-bold">Personal & Home Loan</h3>
+                    <h3 className="text-2xl font-bold">Personal Loan</h3>
                     <p className="mt-2 text-blue-300">Flexible terms, Low interest rates</p>
                   </div>
                 </div>
@@ -509,7 +509,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Frank Laurel</h4>
+                      <h4 className="font-bold text-white">Sahil Kumar</h4>
                       <p className="text-blue-300">Business Loan</p>
                     </div>
                   </div>
@@ -541,7 +541,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white">Neeraj Sharma</h4>
-                      <p className="text-blue-300">car Loan</p>
+                      <p className="text-blue-300">Car Loan</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -653,15 +653,15 @@ export default function Home() {
                 </p>
                 <ul className="text-blue-600 font-medium text-xl list-disc pl-5">
                   <li className="flex items-center justify-center gap-2">
-                    <span className="text-xl">📞</span>
+                    <span className="text-xl font-bold text-gray-900">Anupam 📞</span>
                     <span>+91 9711477131</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <span className="text-xl">📞</span>
+                    <span className="text-xl font-bold text-gray-900">Yugant 📞</span>
                     <span>+91 7011086155</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <span className="text-xl">📞</span>
+                    <span className="text-xl font-bold text-gray-900">Praful 📞</span>
                     <span>+91 9971334676</span>
                   </li>
                 </ul>
