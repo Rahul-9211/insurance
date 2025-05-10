@@ -24,7 +24,7 @@ export default function BusinessLoansPage() {
         <div className="relative z-20 flex flex-col h-full w-full justify-center px-6 md:px-12">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-[var(--font-playfair)]">
-              Business Loans
+              Business Loan
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
               Fuel Your Growth and Expansion
@@ -42,7 +42,7 @@ export default function BusinessLoansPage() {
               <li><span className="text-gray-500 mx-2">/</span></li>
               <li><Link href="/#services" className="text-blue-600 hover:underline">Services</Link></li>
               <li><span className="text-gray-500 mx-2">/</span></li>
-              <li className="text-gray-700">Business Loans</li>
+              <li className="text-gray-700">Business Loan</li>
             </ol>
           </nav>
         </div>
@@ -55,7 +55,7 @@ export default function BusinessLoansPage() {
             {/* Main Content Column */}
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-[var(--font-playfair)]">
-                Business Financing Solutions
+                Business Loan
               </h2>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -71,7 +71,7 @@ export default function BusinessLoansPage() {
                 to helping you achieve your business goals with ease.
               </p>
 
-              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Our Business Loans?</h3>
+              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Us?</h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -161,7 +161,7 @@ export default function BusinessLoansPage() {
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">Term Loans</h4>
                   <p className="text-gray-700 mb-3">Traditional business loans with fixed or variable interest rates and set repayment schedules.</p>
                   <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
-                    <li>Loan amounts from $25,000 to $500,000</li>
+                    <li>Loan amounts from ₹20,00,000 to ₹10,00,00,000</li>
                     <li>Terms ranging from 1 to 10 years</li>
                     <li>Competitive interest rates based on business creditworthiness</li>
                     <li>Predictable monthly payments for easier budgeting</li>
@@ -172,7 +172,7 @@ export default function BusinessLoansPage() {
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">Business Lines of Credit</h4>
                   <p className="text-gray-700 mb-3">Flexible revolving credit that allows you to draw funds as needed up to a predetermined limit.</p>
                   <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
-                    <li>Credit lines up to $250,000</li>
+                    <li>Credit lines up to ₹2,50,00,000</li>
                     <li>Draw funds only when you need them</li>
                     <li>Pay interest only on the amount used</li>
                     <li>Revolving credit replenishes as you pay down the balance</li>
@@ -187,6 +187,17 @@ export default function BusinessLoansPage() {
                     <li>The equipment serves as collateral, potentially making approval easier</li>
                     <li>Terms typically aligned with the expected life of the equipment</li>
                     <li>Potential tax benefits through depreciation</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Loan Againt Property</h4>
+                  <p className="text-gray-700 mb-3">Secure funds by leveraging your residential or commercial property as collateral.</p>
+                  <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                    <li>Avail loan amounts starting from ₹10,00,000 up to ₹5,00,00,000</li>
+                    <li>Long repayment tenures ranging from 5 to 15 years</li>
+                    <li>Lower interest rates compared to unsecured loans</li>
+                    <li>Continue using the property while repaying the loan</li>
                   </ul>
                 </div>
                 
@@ -257,75 +268,21 @@ export default function BusinessLoansPage() {
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents</h3>
-                <nav className="space-y-2">
-                  <a href="#why-choose" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-blue-600 pl-3">
-                    Why Choose Our Business Loans?
-                  </a>
-                  <a href="#how-we-help" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    How We Help Businesses Grow
-                  </a>
-                  <a href="#loan-options" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    Business Loan Options
-                  </a>
-                  <a href="#ayp-advantage" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    The AYP Advantage
-                  </a>
-                </nav>
-                
-                <div className="mt-8 pt-6 border-t border-gray-300">
-                  <h4 className="font-semibold text-gray-900 mb-2">Need Assistance?</h4>
-                  <p className="text-gray-700 mb-4">
-                    Our business loan experts are here to help you find the right financing solution.
-                  </p>
-                  <a href="tel:+15551234567" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    (555) 123-4567
-                  </a>
-                </div>
-                
-                <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                  <h4 className="font-semibold text-gray-900 mb-2">Quick Links</h4>
-                  <ul className="space-y-1">
-                    <li>
-                      <Link href="/tools/business-loan-calculator" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Business Loan Calculator
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/faqs#business-loans" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Business Loan FAQs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Schedule a Consultation
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="mt-6 bg-green-50 p-4 rounded-lg border border-green-100">
-                  <h4 className="font-semibold text-gray-900 mb-2">Business Resources</h4>
-                  <ul className="space-y-1">
-                    <li>
-                      <Link href="/resources/business-planning" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Business Planning Guide
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/resources/cash-flow-management" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Cash Flow Management Tips
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/resources/sba-loan-process" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        SBA Loan Process Explained
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <ul className="space-y-3 text-gray-800">
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Last 2 years ITR with computation</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Last 6 months bank statement</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> GST certificate or MSME certificate </li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> One passport size photo</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> MSME</li>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Co-applicant documents</h3>
+
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>  
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> One passport size photo</li>
+                </ul>
               </div>
             </div>
           </div>
