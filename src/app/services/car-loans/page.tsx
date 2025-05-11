@@ -168,45 +168,47 @@ export default function CarLoansPage() {
 
               <h3 id="how-it-works" className="text-2xl font-bold text-gray-900 mb-4 mt-8">How It Works</h3>
               
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
-                    1
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900">Apply Online</h4>
-                    <p className="text-gray-700">Fill out our simple, secure online application form, which only takes a few minutes. We'll gather essential details to match you with the best loan options based on your needs.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
-                    2
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900">Get Approved</h4>
-                    <p className="text-gray-700">Once you've submitted your application, our team will quickly review it and get back to you with approval, usually within a few hours. We'll provide you with the loan terms and interest rate, allowing you to make an informed decision.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
-                    3
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900">Choose Your Loan</h4>
-                    <p className="text-gray-700">Once approved, you can choose the car loan terms that suit you best. Our team will explain all your options and help you find a plan that fits your budget and goals.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
-                    4
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900">Drive Away</h4>
-                    <p className="text-gray-700">Once you've finalized your loan, you'll receive the funds, and you can proceed to pick up your car. We'll ensure the entire process is as seamless and stress-free as possible.</p>
-                  </div>
+              <div className="mb-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 relative">
+                  {/* Connector line for desktop */}
+                  <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-100 z-0" style={{transform: 'translateY(-50%)'}}></div>
+                  {/* Steps */}
+                  {[
+                    {
+                      number: 1,
+                      title: 'Apply Online',
+                      desc: `Fill out our simple, secure online application form, which only takes a few minutes. We'll gather essential details to match you with the best loan options based on your needs.`
+                    },
+                    {
+                      number: 2,
+                      title: 'Get Approved',
+                      desc: `Once you've submitted your application, our team will quickly review it and get back to you with approval, usually within a few hours. We'll provide you with the loan terms and interest rate, allowing you to make an informed decision.`
+                    },
+                    {
+                      number: 3,
+                      title: 'Choose Your Loan',
+                      desc: `Once approved, you can choose the car loan terms that suit you best. Our team will explain all your options and help you find a plan that fits your budget and goals.`
+                    },
+                    {
+                      number: 4,
+                      title: 'Drive Away',
+                      desc: `Once you've finalized your loan, you'll receive the funds, and you can proceed to pick up your car. We'll ensure the entire process is as seamless and stress-free as possible.`
+                    }
+                  ].map((step, idx, arr) => (
+                    <div key={step.number} className="relative z-10 flex flex-col items-center md:w-1/4">
+                      {/* Connector for mobile */}
+                      {idx !== 0 && (
+                        <div className="block md:hidden w-1 h-8 bg-blue-100 mb-2"></div>
+                      )}
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl shadow-lg mb-3 border-4 border-white">{step.number}</div>
+                      <h4 className="text-lg font-semibold text-gray-900 text-center mb-2">{step.title}</h4>
+                      <p className="text-gray-700 text-center text-sm">{step.desc}</p>
+                      {/* Connector for desktop */}
+                      {idx !== arr.length - 1 && (
+                        <div className="hidden md:block absolute right-0 top-1/2 w-full h-1 bg-blue-100" style={{left: '50%', zIndex: -1}}></div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

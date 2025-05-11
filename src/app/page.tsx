@@ -3,6 +3,10 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Header from "./components/Header";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Autoplay } from 'swiper/modules';
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -171,123 +175,170 @@ export default function Home() {
             </div>
             
             {/* Loan Types Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={24}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              breakpoints={{
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
+              }}
+              className="!pb-12"
+            >
               {/* Car Loans */}
-              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                <div className="relative h-64">
-                  <Image
-                    src="/loans/car-loan.jpg"
-                    alt="Car Loans"
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                    <h3 className="text-2xl font-bold">Car Loans</h3>
-                    <p className="mt-2 text-blue-300">Fast approvals, competitive rates</p>
+              <SwiperSlide>
+                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                  <div className="relative h-64">
+                    <Image
+                      src="/loans/car-loan.jpg"
+                      alt="Car Loans"
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full p-6">
+                      <h3 className="text-2xl font-bold">Car Loans</h3>
+                      <p className="mt-2 text-blue-300">Fast approvals, competitive rates</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-4">
+                      Drive away in your dream car with our flexible financing options. 
+                      We offer competitive rates, quick approval processes, and personalized terms.
+                    </p>
+                    <Link href="/services/car-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                      Learn more 
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-300 mb-4">
-                    Drive away in your dream car with our flexible financing options. 
-                    We offer competitive rates, quick approval processes, and personalized terms.
-                  </p>
-                  <Link href="/services/car-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                    Learn more 
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              
+              </SwiperSlide>
               {/* Personal Loans */}
-              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                <div className="relative h-64">
-                  <Image
-                    src="/loans/personal-loan.jpg"
-                    alt="Personal Loans"
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                    <h3 className="text-2xl font-bold">Personal Loans</h3>
-                    <p className="mt-2 text-blue-300">Flexible terms, low interest rates</p>
+              <SwiperSlide>
+                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                  <div className="relative h-64">
+                    <Image
+                      src="/loans/personal-loan.jpg"
+                      alt="Personal Loans"
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full p-6">
+                      <h3 className="text-2xl font-bold">Personal Loans</h3>
+                      <p className="mt-2 text-blue-300">Flexible terms, low interest rates</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-4">
+                      Get the funds you need for life's big moments. From home renovations 
+                      to debt consolidation, our personal loans offer flexibility and peace of mind.
+                    </p>
+                    <Link href="/services/personal-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                      Learn more 
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-300 mb-4">
-                    Get the funds you need for life's big moments. From home renovations 
-                    to debt consolidation, our personal loans offer flexibility and peace of mind.
-                  </p>
-                  <Link href="/services/personal-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                    Learn more 
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-              
+              </SwiperSlide>
               {/* Business Loans */}
-              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                <div className="relative h-64">
-                  <Image
-                    src="/loans/business-loan.jpg"
-                    alt="Business Loans"
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                    <h3 className="text-2xl font-bold">Business Loans</h3>
-                    <p className="mt-2 text-blue-300">Tailored for growth and expansion</p>
+              <SwiperSlide>
+                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                  <div className="relative h-64">
+                    <Image
+                      src="/loans/business-loan.jpg"
+                      alt="Business Loans"
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full p-6">
+                      <h3 className="text-2xl font-bold">Business Loans</h3>
+                      <p className="mt-2 text-blue-300">Tailored for growth and expansion</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-4">
+                      Fuel your business growth with our specialized financing solutions. 
+                      From startups to established enterprises, we provide the capital you need to thrive.
+                    </p>
+                    <Link href="/services/business-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                      Learn more 
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-300 mb-4">
-                    Fuel your business growth with our specialized financing solutions. 
-                    From startups to established enterprises, we provide the capital you need to thrive.
-                  </p>
-                  <Link href="/services/business-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                    Learn more 
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-
+              </SwiperSlide>
               {/* Insurance */}
-              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                <div className="relative h-64">
-                  <Image
-                    src="/images/insurance.jpeg"
-                    alt="Insurance Solutions"
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                    <h3 className="text-2xl font-bold">Insurance</h3>
-                    <p className="mt-2 text-blue-300">Comprehensive protection plans</p>
+              <SwiperSlide>
+                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                  <div className="relative h-64">
+                    <Image
+                      src="/images/insurance.jpeg"
+                      alt="Insurance Solutions"
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full p-6">
+                      <h3 className="text-2xl font-bold">Insurance</h3>
+                      <p className="mt-2 text-blue-300">Comprehensive protection plans</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-4">
+                      Protect what matters most with our range of insurance options. From life and health to property 
+                      and auto, we offer customized coverage to give you peace of mind.
+                    </p>
+                    <Link href="/services/insurance" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                      Learn more 
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-300 mb-4">
-                    Protect what matters most with our range of insurance options. From life and health to property 
-                    and auto, we offer customized coverage to give you peace of mind.
-                  </p>
-                  <Link href="/services/insurance" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                    Learn more 
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </Link>
+              </SwiperSlide>
+              {/* Home Loans (new card) */}
+              <SwiperSlide>
+                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                  <div className="relative h-64">
+                    <Image
+                      src="/loans/home-loan.jpg"
+                      alt="Home Loans"
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full p-6">
+                      <h3 className="text-2xl font-bold">Home Loans</h3>
+                      <p className="mt-2 text-blue-300">Unlock your dream home</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-4">
+                      Unlock your dream home with our tailored mortgage loan solutions, providing competitive
+                      rates and flexible repayment options to suit your needs.
+                    </p>
+                    <Link href="/services/home-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                      Learn more 
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </section>
         
@@ -519,11 +570,11 @@ export default function Home() {
                   <div className="flex items-center mb-4">
                     <div className="w-14 h-14 rounded-lg overflow-hidden mr-4">
                       <Image 
-                        src="/testimonials/client1.jpg"
-                        alt="Michael Thompson"
+                        src="/user-avatar.png"
+                        alt="User Avatar"
                         width={56}
                         height={56}
-                        className="object-cover"
+                        className="object-cover rounded-lg"
                       />
                     </div>
                     <div>
@@ -552,11 +603,11 @@ export default function Home() {
                   <div className="flex items-center mb-4">
                     <div className="w-14 h-14 rounded-lg overflow-hidden mr-4">
                       <Image 
-                        src="/testimonials/client2.jpg"
-                        alt="Sarah Johnson"
+                        src="/user-avatar.png"
+                        alt="User Avatar"
                         width={56}
                         height={56}
-                        className="object-cover"
+                        className="object-cover rounded-lg"
                       />
                     </div>
                     <div>
@@ -585,11 +636,11 @@ export default function Home() {
                   <div className="flex items-center mb-4">
                     <div className="w-14 h-14 rounded-lg overflow-hidden mr-4">
                       <Image 
-                        src="/testimonials/client3.jpg"
-                        alt="David Wilson"
+                        src="/user-avatar.png"
+                        alt="User Avatar"
                         width={56}
                         height={56}
-                        className="object-cover"
+                        className="object-cover rounded-lg"
                       />
                     </div>
                     <div>
