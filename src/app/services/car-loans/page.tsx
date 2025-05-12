@@ -24,7 +24,7 @@ export default function CarLoansPage() {
         <div className="relative z-20 flex flex-col h-full w-full justify-center px-6 md:px-12">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-[var(--font-playfair)]">
-              Car Loans
+              New & Used Car Loan
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
               Fast Approvals, Competitive Rates, and Flexible Financing
@@ -55,17 +55,14 @@ export default function CarLoansPage() {
             {/* Main Content Column */}
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-[var(--font-playfair)]">
-                Car Loans at AYP Finance Solutions
+                New & Used Car Loan
               </h2>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                At AYP Finance Solutions, we understand that purchasing a car is an exciting and significant milestone. 
-                Whether you're buying your first car, upgrading to a newer model, or refinancing your existing loan, 
-                we're here to help make your car ownership dreams a reality. Our car loan options are designed to provide 
-                you with the financial flexibility and support you need throughout the entire process.
+                At AYP Finance Solutions, we understand that purchasing a car - whether new or used, is an exciting and significant milestone. Whether you're buying your first vehicle, upgrading to a newer model, opting for a reliable pre-owned car, or refinancing your existing loan, we're here to help make your car ownership dreams a reality. Our car loan options are designed to provide you with the financial flexibility and support you need throughout the entire process.
               </p>
 
-              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Our Car Loans?</h3>
+              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Us?</h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -138,7 +135,7 @@ export default function CarLoansPage() {
                   <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                     <li>Competitive interest rates starting from 3.99% APR</li>
                     <li>Flexible terms up to 84 months</li>
-                    <li>Financing up to 100% of the vehicle's value</li>
+                    <li>Financing up to 90% of the vehicle's value</li>
                     <li>Fast approval process</li>
                   </ul>
                 </div>
@@ -168,47 +165,45 @@ export default function CarLoansPage() {
 
               <h3 id="how-it-works" className="text-2xl font-bold text-gray-900 mb-4 mt-8">How It Works</h3>
               
-              <div className="mb-8">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 relative">
-                  {/* Connector line for desktop */}
-                  <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-100 z-0" style={{transform: 'translateY(-50%)'}}></div>
-                  {/* Steps */}
-                  {[
-                    {
-                      number: 1,
-                      title: 'Apply Online',
-                      desc: `Fill out our simple, secure online application form, which only takes a few minutes. We'll gather essential details to match you with the best loan options based on your needs.`
-                    },
-                    {
-                      number: 2,
-                      title: 'Get Approved',
-                      desc: `Once you've submitted your application, our team will quickly review it and get back to you with approval, usually within a few hours. We'll provide you with the loan terms and interest rate, allowing you to make an informed decision.`
-                    },
-                    {
-                      number: 3,
-                      title: 'Choose Your Loan',
-                      desc: `Once approved, you can choose the car loan terms that suit you best. Our team will explain all your options and help you find a plan that fits your budget and goals.`
-                    },
-                    {
-                      number: 4,
-                      title: 'Drive Away',
-                      desc: `Once you've finalized your loan, you'll receive the funds, and you can proceed to pick up your car. We'll ensure the entire process is as seamless and stress-free as possible.`
-                    }
-                  ].map((step, idx, arr) => (
-                    <div key={step.number} className="relative z-10 flex flex-col items-center md:w-1/4">
-                      {/* Connector for mobile */}
-                      {idx !== 0 && (
-                        <div className="block md:hidden w-1 h-8 bg-blue-100 mb-2"></div>
-                      )}
-                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl shadow-lg mb-3 border-4 border-white">{step.number}</div>
-                      <h4 className="text-lg font-semibold text-gray-900 text-center mb-2">{step.title}</h4>
-                      <p className="text-gray-700 text-center text-sm">{step.desc}</p>
-                      {/* Connector for desktop */}
-                      {idx !== arr.length - 1 && (
-                        <div className="hidden md:block absolute right-0 top-1/2 w-full h-1 bg-blue-100" style={{left: '50%', zIndex: -1}}></div>
-                      )}
-                    </div>
-                  ))}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
+                    1
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Apply Online</h4>
+                    <p className="text-gray-700">Fill out our simple, secure online application form, which only takes a few minutes. We'll gather essential details to match you with the best loan options based on your needs.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
+                    2
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Get Approved</h4>
+                    <p className="text-gray-700">Once you've submitted your application, our team will quickly review it and get back to you with approval, usually within a few hours. We'll provide you with the loan terms and interest rate, allowing you to make an informed decision.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
+                    3
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Choose Your Loan</h4>
+                    <p className="text-gray-700">Once approved, you can choose the car loan terms that suit you best. Our team will explain all your options and help you find a plan that fits your budget and goals.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mt-1 text-white font-bold">
+                    4
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Drive Away</h4>
+                    <p className="text-gray-700">Once you've finalized your loan, you'll receive the funds, and you can proceed to pick up your car. We'll ensure the entire process is as seamless and stress-free as possible.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -216,48 +211,20 @@ export default function CarLoansPage() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents - Salaried Individuals</h3>
                 <ul className="space-y-3 text-gray-800">
-                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Identity Proof (Aadhaar, Passport, etc.)</li>
-                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Address Proof (Utility Bill, Rent Agreement, etc.)</li>
-                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Income Proof (Salary Slips, Bank Statements)</li>
-                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Car Quotation/Invoice</li>
-                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Passport Size Photographs</li>
-                </ul>
-                
-                <div className="mt-8 pt-6 border-t border-gray-300">
-                  <h4 className="font-semibold text-gray-900 mb-2">Need Assistance?</h4>
-                  <p className="text-gray-700 mb-4">
-                    Our financial advisors are here to help you with your car loan needs.
-                  </p>
-                  <a href="tel:+15551234567" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    (555) 123-4567
-                  </a>
-                </div>
-                
-                <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                  <h4 className="font-semibold text-gray-900 mb-2">Quick Links</h4>
-                  <ul className="space-y-1">
-                    <li>
-                      <Link href="/services/car-loans" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Car Loan Calculator
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/faqs" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Car Loan FAQs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Contact a Loan Specialist
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Latest Electricity Bill</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> 3 months salary slip</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> 6 Months Bank Statement</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Passport Size Photograph</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> 2 Years Form 16 or 2 years ITR with Computation </li>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Self-Employed / Business Owners</h3>
+                  
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> GST/MSME certificate</li>
+                </ul>  
               </div>
             </div>
           </div>

@@ -6,7 +6,6 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    requirement: "",
     message: ""
   });
   
@@ -14,14 +13,13 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    requirement: "",
     message: ""
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -57,22 +55,13 @@ export default function ContactForm() {
       isValid = false;
     }
     
-    // Validate phone (now required)
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-      isValid = false;
-    } else {
+    // Validate phone (optional but must be valid if provided)
+    if (formData.phone.trim()) {
       const phoneRegex = /^\+?[0-9\s\-()]{8,20}$/;
       if (!phoneRegex.test(formData.phone)) {
         newErrors.phone = "Please enter a valid phone number";
         isValid = false;
       }
-    }
-    
-    // Validate requirement (dropdown)
-    if (!formData.requirement) {
-      newErrors.requirement = "Please select a requirement";
-      isValid = false;
     }
     
     // Validate message
@@ -106,7 +95,6 @@ export default function ContactForm() {
         name: "",
         email: "",
         phone: "",
-        requirement: "",
         message: ""
       });
       
@@ -168,7 +156,7 @@ export default function ContactForm() {
         
         <div className="mb-4">
           <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-            Phone Number <span className="text-red-500">*</span>
+            Phone Number <span className="text-gray-500 text-sm font-normal">(optional)</span>
           </label>
           <input
             type="tel"
@@ -180,27 +168,6 @@ export default function ContactForm() {
             placeholder="(555) 123-4567"
           />
           {errors.phone && <p className="mt-1 text-red-500 text-sm">{errors.phone}</p>}
-        </div>
-        
-        <div className="mb-4">
-          <label htmlFor="requirement" className="block text-gray-700 font-medium mb-2">
-            Requirement <span className="text-red-500">*</span>
-          </label>
-          <select
-            id="requirement"
-            name="requirement"
-            value={formData.requirement}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-md border ${errors.requirement ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
-          >
-            <option value="">Select Requirement</option>
-            <option value="Home Loan">Home Loan</option>
-            <option value="Personal Loan">Personal Loan</option>
-            <option value="Business Loan">Business Loan</option>
-            <option value="Car Loan">Car Loan</option>
-            <option value="Insurance">Insurance</option>
-          </select>
-          {errors.requirement && <p className="mt-1 text-red-500 text-sm">{errors.requirement}</p>}
         </div>
         
         <div className="mb-6">

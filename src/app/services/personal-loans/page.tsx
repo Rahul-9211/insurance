@@ -24,7 +24,7 @@ export default function PersonalLoansPage() {
         <div className="relative z-20 flex flex-col h-full w-full justify-center px-6 md:px-12">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-[var(--font-playfair)]">
-              Personal & Home Loans
+              Personal Loan
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
               Flexible Terms, Low Interest Rates
@@ -42,7 +42,7 @@ export default function PersonalLoansPage() {
               <li><span className="text-gray-500 mx-2">/</span></li>
               <li><Link href="/#services" className="text-blue-600 hover:underline">Services</Link></li>
               <li><span className="text-gray-500 mx-2">/</span></li>
-              <li className="text-gray-700">Personal Loans</li>
+              <li className="text-gray-700">Personal Loan</li>
             </ol>
           </nav>
         </div>
@@ -55,16 +55,14 @@ export default function PersonalLoansPage() {
             {/* Main Content Column */}
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-[var(--font-playfair)]">
-                Personal & Home Loan Solutions
+                Personal Loan
               </h2>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
-                At AYP Finance Solutions, we understand that life's important moments often come with financial needs. 
-                Whether you're looking to renovate your home, consolidate debt, or make another significant purchase, 
-                our Personal and Home Loans are designed to provide the flexibility and support you need.
+                At AYP Finance Solutions, we understand that life's important moments often come with financial needs. Whether you're looking to renovate your home, consolidate debt, or cover unexpected expenses, our Personal Loans are designed to provide the flexibility and support you need.
               </p>
 
-              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Our Personal & Home Loans?</h3>
+              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Us?</h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -87,7 +85,7 @@ export default function PersonalLoansPage() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900">Low Interest Rates</h4>
-                    <p className="text-gray-700">We believe in making financial solutions accessible to everyone. That's why our personal and home loans come with competitive, low interest rates. You can save more money over time and reduce your overall financial burden, ensuring your loan works in your favor, not against you.</p>
+                    <p className="text-gray-700">We believe in making financial solutions accessible to everyone. That’s why our personal loans come with competitive, low interest rates. You can save more money over time and reduce your overall financial burden, ensuring your loan works in your favor, not against you.</p>
                   </div>
                 </div>
                 
@@ -111,7 +109,7 @@ export default function PersonalLoansPage() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900">Seamless Approval and Disbursement</h4>
-                    <p className="text-gray-700">Once your loan application is submitted, we work quickly to get it approved. Our team processes applications efficiently, ensuring you receive the funds you need without unnecessary delays. Whether you're funding a home renovation or covering other personal expenses, we make sure the approval process is smooth and quick.</p>
+                    <p className="text-gray-700">Once your loan application is submitted, we work quickly to get it approved. Our team processes applications efficiently, ensuring you receive the funds you need without unnecessary delays. Whether you're consolidating debt or covering personal expenses, we make sure the approval process is smooth and quick.</p>
                   </div>
                 </div>
                 
@@ -123,12 +121,12 @@ export default function PersonalLoansPage() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900">Customized Loan Solutions</h4>
-                    <p className="text-gray-700">We know that no two clients are alike. That's why we offer customized loan solutions tailored to your specific financial situation. Our loan specialists take the time to understand your needs, offering personalized recommendations that help you achieve your financial goals without added stress.</p>
+                    <p className="text-gray-700">We know that no two clients are alike. That’s why we offer customized loan solutions tailored to your specific financial situation. Our loan specialists take the time to understand your needs, offering personalized recommendations that help you achieve your financial goals without added stress.</p>
                   </div>
                 </div>
               </div>
               
-              <h3 id="loan-options" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Our Personal & Home Loan Options</h3>
+              <h3 id="loan-options" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Our Personal Loan Options</h3>
               
               <div className="space-y-4 mb-8">
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
@@ -150,17 +148,6 @@ export default function PersonalLoansPage() {
                     <li>Add new living spaces or bedrooms</li>
                     <li>Make energy-efficient upgrades</li>
                     <li>Enhance your home's curb appeal</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Home Mortgage Loans</h4>
-                  <p className="text-gray-700 mb-3">Turn your dream home into a reality with our customized mortgage loan solutions.</p>
-                  <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
-                    <li>Competitive rates for first-time homebuyers</li>
-                    <li>Refinancing options to lower your existing mortgage</li>
-                    <li>Various loan terms to suit your budget</li>
-                    <li>Expert guidance throughout the home buying process</li>
                   </ul>
                 </div>
                 
@@ -214,65 +201,20 @@ export default function PersonalLoansPage() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Table of Contents</h3>
-                <nav className="space-y-2">
-                  <a href="#why-choose" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-blue-600 pl-3">
-                    Why Choose Our Personal & Home Loans?
-                  </a>
-                  <a href="#loan-options" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    Our Personal & Home Loan Options
-                  </a>
-                  <a href="#application-process" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    Application Process
-                  </a>
-                </nav>
-                
-                <div className="mt-8 pt-6 border-t border-gray-300">
-                  <h4 className="font-semibold text-gray-900 mb-2">Need Assistance?</h4>
-                  <p className="text-gray-700 mb-4">
-                    Our loan experts are here to help you find the right personal loan solution.
-                  </p>
-                  <a href="tel:+15551234567" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    (555) 123-4567
-                  </a>
-                </div>
-                
-                <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                  <h4 className="font-semibold text-gray-900 mb-2">Quick Links</h4>
-                  <ul className="space-y-1">
-                    <li>
-                      <Link href="/tools/loan-calculator" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Loan Calculator
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/faqs#personal-loans" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Personal Loan FAQs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Contact a Loan Specialist
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="mt-6 bg-green-50 p-4 rounded-lg border border-green-100">
-                  <h4 className="font-semibold text-gray-900 mb-2">Get Pre-Qualified</h4>
-                  <p className="text-gray-700 mb-3 text-sm">
-                    Find out how much you might qualify for without affecting your credit score.
-                  </p>
-                  <Link 
-                    href="/tools/pre-qualification" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md inline-block text-center"
-                  >
-                    Check Your Rate
-                  </Link>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents</h3>
+                <ul className="space-y-3 text-gray-800">
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Email address</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Last 6 months bank statement</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Latest 3 months salary slip</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Office ID card</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> One passport size photo</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Form 16</li>
+                  <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Loan schedules if any</li>
+
+
+                </ul>
               </div>
             </div>
           </div>

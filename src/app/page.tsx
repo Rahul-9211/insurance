@@ -3,10 +3,6 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Header from "./components/Header";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -71,11 +67,7 @@ export default function Home() {
             </h2>
             
             <p className="text-white max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
-              AYP Financial Solutions offers streamlined access to a wide range of financial products, 
-              including car loans, personal loans, business loans, home loans, and credit cards. 
-              We partner with top-tier financial institutions to deliver expert advice and 
-              facilitate a seamless application process. Our commitment is to provide personalized, 
-              transparent service to help you achieve your financial objectives.
+              AYP Finance Solutions offers streamlined access to a wide range of financial products, including car loans, personal loans, business loans, home loans, and insurance. We partner with top-tier financial institutions to deliver expert advice and facilitate a seamless application process. Our commitment is to provide personalized, transparent service to help you achieve your financial objectives.
             </p>
             
             <div className="flex w-full max-w-xs mx-auto">
@@ -110,33 +102,30 @@ export default function Home() {
                 </h2>
                 
                 <p className="text-gray-700 text-lg mb-10 leading-relaxed">
-                  At AYP Finance Solutions, we focus on transparency, efficiency, and personalized service. 
-                  Our goal is to help clients achieve their financial objectives by providing expert 
-                  advice and customized solutions. We partner with top-tier financial institutions to deliver 
-                  expert advice and facilitate a seamless application process.
+                  At AYP Finance Solutions, we focus on transparency, efficiency, and personalized service. Our goal is to help clients achieve their financial objectives by providing expert advice and customized solutions.
                 </p>
                 
                 {/* Statistics Grid */}
                 <div className="grid grid-cols-2 gap-8">
                   {/* Stat 1 */}
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">100</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-2">2753</h3>
                     <p className="text-xl font-medium text-gray-800 mb-1">clients served</p>
-                    <p className="text-gray-600">We have successfully assisted over 100 clients in achieving their financial dreams.</p>
+                    <p className="text-gray-600">We have successfully assisted over 2753 clients in achieving their financial dreams.</p>
                   </div>
                   
                   {/* Stat 2 */}
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">20</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-2">19</h3>
                     <p className="text-xl font-medium text-gray-800 mb-1">team members</p>
-                    <p className="text-gray-600">Our dedicated team consists of 20 professionals, each committed to providing exceptional service.</p>
+                    <p className="text-gray-600">Our dedicated team consists of 19 professionals, each committed to providing exceptional service.</p>
                   </div>
                   
                   {/* Stat 3 */}
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">50</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-2">9</h3>
                     <p className="text-xl font-medium text-gray-800 mb-1">years</p>
-                    <p className="text-gray-600">With a combined experience of 50 years in financial services.</p>
+                    <p className="text-gray-600">With a combined experience of 9 years in financial services.</p>
                   </div>
                   
                   {/* Stat 4 */}
@@ -157,188 +146,135 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               {/* Heading and Description */}
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 font-[var(--font-playfair)]">
-                  Explore Our Diverse <em className="font-italic">Loan Options</em> for Your Financial Needs
+                <h2 className="text-4xl md:text-4xl font-bold mb-6 font-[var(--font-playfair)] leading-tight">
+                  Explore Our Diverse Loan Options for Your Financial Needs
                 </h2>
               </div>
               
               <div>
                 <p className="text-lg leading-relaxed text-gray-300">
-                  At AYP Financial Solutions, we understand that everyone's financial
-                  needs are unique. That's why we offer a comprehensive range of
-                  loan products to suit various requirements. Whether you're looking
-                  to purchase a new car, fund your personal goals, or expand your
-                  business, we have a loan solution for you. Let us help you navigate
-                  the options and find the perfect fit for your situation.
+                  At AYP Finance Solutions, we know financial needs vary from person to person. That’s why we offer a range of loan options—whether you're buying a car, funding personal goals, or expanding your business. We also provide insurance plans to help secure your future. Let us help you choose the right financial and insurance solutions.
                 </p>
               </div>
             </div>
             
             {/* Loan Types Grid */}
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={24}
-              slidesPerView={1}
-              loop={true}
-              autoplay={{ delay: 2500, disableOnInteraction: false }}
-              breakpoints={{
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-                1280: { slidesPerView: 4 },
-              }}
-              className="!pb-12"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Car Loans */}
-              <SwiperSlide>
-                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                  <div className="relative h-64">
-                    <Image
-                      src="/loans/car-loan.jpg"
-                      alt="Car Loans"
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold">Car Loans</h3>
-                      <p className="mt-2 text-blue-300">Fast approvals, competitive rates</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-300 mb-4">
-                      Drive away in your dream car with our flexible financing options. 
-                      We offer competitive rates, quick approval processes, and personalized terms.
-                    </p>
-                    <Link href="/services/car-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                      Learn more 
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </Link>
+              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                <div className="relative h-64">
+                  <Image
+                    src="/loans/car-loan.jpg"
+                    alt="Car Loans"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold">New & Used <br></br>Car Loan</h3>
+                    <p className="mt-2 text-blue-300">Fast Approvals, Competitive Rates, and Flexible Financing</p>
                   </div>
                 </div>
-              </SwiperSlide>
+                <div className="p-6">
+                  <p className="text-gray-300 mb-4">
+                    Drive away in your dream car with our flexible financing options. 
+                    We offer competitive rates, quick approval processes, and personalized terms.
+                  </p>
+                  <Link href="/services/car-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                    Learn more 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              
               {/* Personal Loans */}
-              <SwiperSlide>
-                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                  <div className="relative h-64">
-                    <Image
-                      src="/loans/personal-loan.jpg"
-                      alt="Personal Loans"
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold">Personal Loans</h3>
-                      <p className="mt-2 text-blue-300">Flexible terms, low interest rates</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-300 mb-4">
-                      Get the funds you need for life's big moments. From home renovations 
-                      to debt consolidation, our personal loans offer flexibility and peace of mind.
-                    </p>
-                    <Link href="/services/personal-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                      Learn more 
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </Link>
+              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                <div className="relative h-64">
+                  <Image
+                    src="/loans/personal-loan.jpg"
+                    alt="Personal Loans"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold">Personal Loan</h3>
+                    <p className="mt-2 text-blue-300">Flexible terms, Low interest rates</p>
                   </div>
                 </div>
-              </SwiperSlide>
+                <div className="p-6">
+                  <p className="text-gray-300 mb-4">
+                    Get the funds you need for life's big moments. From home renovations 
+                    to debt consolidation, our personal loan offer flexibility and peace of mind.
+                  </p>
+                  <Link href="/services/personal-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                    Learn more 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+              
               {/* Business Loans */}
-              <SwiperSlide>
-                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                  <div className="relative h-64">
-                    <Image
-                      src="/loans/business-loan.jpg"
-                      alt="Business Loans"
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold">Business Loans</h3>
-                      <p className="mt-2 text-blue-300">Tailored for growth and expansion</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-300 mb-4">
-                      Fuel your business growth with our specialized financing solutions. 
-                      From startups to established enterprises, we provide the capital you need to thrive.
-                    </p>
-                    <Link href="/services/business-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                      Learn more 
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </Link>
+              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                <div className="relative h-64">
+                  <Image
+                    src="/loans/business-loan.jpg"
+                    alt="Business Loans"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold">Business Loan</h3>
+                    <p className="mt-2 text-blue-300">Tailored for growth and expansion</p>
                   </div>
                 </div>
-              </SwiperSlide>
+                <div className="p-6">
+                  <p className="text-gray-300 mb-4">
+                    Fuel your business growth with our specialized financing solutions. 
+                    From startups to established enterprises, we provide the capital you need to thrive.
+                  </p>
+                  <Link href="/services/business-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                    Learn more 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+
               {/* Insurance */}
-              <SwiperSlide>
-                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                  <div className="relative h-64">
-                    <Image
-                      src="/images/insurance.jpeg"
-                      alt="Insurance Solutions"
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold">Insurance</h3>
-                      <p className="mt-2 text-blue-300">Comprehensive protection plans</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-300 mb-4">
-                      Protect what matters most with our range of insurance options. From life and health to property 
-                      and auto, we offer customized coverage to give you peace of mind.
-                    </p>
-                    <Link href="/services/insurance" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                      Learn more 
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </Link>
+              <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
+                <div className="relative h-64">
+                  <Image
+                    src="/images/insurance.jpeg"
+                    alt="Insurance Solutions"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold">Insurance</h3>
+                    <p className="mt-2 text-blue-300">Reliable Coverage, Tailored Protection, and Peace of Mind</p>
                   </div>
                 </div>
-              </SwiperSlide>
-              {/* Home Loans (new card) */}
-              <SwiperSlide>
-                <div className="rounded-lg overflow-hidden bg-gray-800 hover:bg-gray-700 transition-all shadow-xl group">
-                  <div className="relative h-64">
-                    <Image
-                      src="/loans/home-loan.jpg"
-                      alt="Home Loans"
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold">Home Loans</h3>
-                      <p className="mt-2 text-blue-300">Unlock your dream home</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-300 mb-4">
-                      Unlock your dream home with our tailored mortgage loan solutions, providing competitive
-                      rates and flexible repayment options to suit your needs.
-                    </p>
-                    <Link href="/services/home-loans" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
-                      Learn more 
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </Link>
-                  </div>
+                <div className="p-6">
+                  <p className="text-gray-300 mb-4">
+                    Protect what matters most with our range of insurance options. From life and health to property and auto, we offer customized coverage to give you peace of mind.
+                  </p>
+                  <Link href="/services/insurance" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                    Learn more 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
                 </div>
-              </SwiperSlide>
-            </Swiper>
+              </div>
+            </div>
           </div>
         </section>
         
@@ -350,8 +286,7 @@ export default function Home() {
                 Our Comprehensive Services
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                We provide expert guidance and support at every stage of your financial journey.
-                From application to approval, our team ensures a seamless experience.
+                We offer expert guidance and support throughout your financial journey, ensuring a smooth process from application to approval.
               </p>
             </div>
             
@@ -372,8 +307,7 @@ export default function Home() {
                     Expert Loan Application Assistance
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    We simplify the loan application process, providing expert guidance from
-                    documentation to submission, increasing your approval chances.
+                    We simplify your loan process with expert guidance, from paperwork to approval, boosting your confidence and chances of success.
                   </p>
                 </div>
               </div>
@@ -390,11 +324,10 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Personalized Financial Consultations
+                    Personalized Financial Services
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Get tailored recommendations for car loans, personal loans, and credit cards,
-                    ensuring informed decisions for better financial outcomes.
+                    Get tailored car loan, personal loan & business loan solutions to help you make informed, goal-driven financial decisions with ease.
                   </p>
                 </div>
               </div>
@@ -411,11 +344,10 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Comprehensive Financial Planning
+                    Tailored Insurance Plans
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    We offer in-depth financial planning services to help you achieve your long-term
-                    financial goals, from debt management to retirement planning.
+                    Protect your health, family, and assets with insurance plans tailored to your needs - simple, reliable, and hassle-free coverage.
                   </p>
                 </div>
               </div>
@@ -435,8 +367,7 @@ export default function Home() {
                     Home Loan Solutions
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Unlock your dream home with our tailored mortgage loan solutions, providing competitive
-                    rates and flexible repayment options to suit your needs.
+                    Make homeownership easy with our flexible Home Loans & LAP options - competitive rates, simple process, and expert support at every step.
                   </p>
                 </div>
               </div>
@@ -542,11 +473,11 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="mt-12 text-center">
+            {/* <div className="mt-12 text-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors shadow-lg">
                 Explore All Tools
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
         
@@ -570,16 +501,16 @@ export default function Home() {
                   <div className="flex items-center mb-4">
                     <div className="w-14 h-14 rounded-lg overflow-hidden mr-4">
                       <Image 
-                        src="/user-avatar.png"
-                        alt="User Avatar"
+                        src="/testimonials/client1.jpg"
+                        alt="Michael Thompson"
                         width={56}
                         height={56}
-                        className="object-cover rounded-lg"
+                        className="object-cover"
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Michael Thompson</h4>
-                      <p className="text-blue-300">Home Loan Client</p>
+                      <h4 className="font-bold text-white">Sahil Kumar</h4>
+                      <p className="text-blue-300">Business Loan</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -590,9 +521,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "AYP Financial made the home loan process incredibly easy. Their team guided me 
-                    through every step and found me the best rates available. I couldn't be happier 
-                    with the service I received."
+                    "Running a small business means time is money, and I can’t afford delays. When I approached this team for a business loan, I was honestly expecting a long, drawn-out process. But to my surprise, they were incredibly efficient. I was able to secure the funds I needed to expand my operations within days."
                   </p>
                 </div>
               </div>
@@ -603,16 +532,16 @@ export default function Home() {
                   <div className="flex items-center mb-4">
                     <div className="w-14 h-14 rounded-lg overflow-hidden mr-4">
                       <Image 
-                        src="/user-avatar.png"
-                        alt="User Avatar"
+                        src="/testimonials/client3.jpg"
+                        alt="Sarah Johnson"
                         width={56}
                         height={56}
-                        className="object-cover rounded-lg"
+                        className="object-cover"
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Sarah Johnson</h4>
-                      <p className="text-blue-300">Financial Planning Client</p>
+                      <h4 className="font-bold text-white">Neeraj Sharma</h4>
+                      <p className="text-blue-300">Car Loan</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -623,9 +552,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "The financial planning services at AYP have transformed my approach to personal 
-                    finance. Their expert team helped me create a comprehensive plan that's already 
-                    showing results. Highly recommended!"
+                    "Buying my dream car, the BMW X7, was a big moment for me, but I was worried about the loan process dragging on or hitting snags. Thankfully, I found this team. The entire process felt smooth and stress-free, and I drove away in my new car much sooner than expected. Highly recommend!"
                   </p>
                 </div>
               </div>
@@ -636,16 +563,16 @@ export default function Home() {
                   <div className="flex items-center mb-4">
                     <div className="w-14 h-14 rounded-lg overflow-hidden mr-4">
                       <Image 
-                        src="/user-avatar.png"
-                        alt="User Avatar"
+                        src="/testimonials/client2.jpg"
+                        alt="David Wilson"
                         width={56}
                         height={56}
-                        className="object-cover rounded-lg"
+                        className="object-cover"
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">David Wilson</h4>
-                      <p className="text-blue-300">Business Loan Client</p>
+                      <h4 className="font-bold text-white">Ankita Pandey</h4>
+                      <p className="text-blue-300">Personal Loan</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -656,22 +583,20 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "I needed a business loan to expand my company, and AYP Financial delivered beyond 
-                    my expectations. They found a solution that perfectly matched my needs with terms 
-                    I couldn't find elsewhere."
+                    "I had a sudden medical emergency in the family and needed a high-ticket personal loan on short notice. I was anxious, but this team really came through. They understood my urgency, prioritized my case, and worked closely with me to get everything done quickly.  I’ll always be grateful for how they helped me during a tough time."
                   </p>
                 </div>
               </div>
             </div>
             
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
               <a href="#" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-lg">
                 Read More Success Stories 
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -705,7 +630,7 @@ export default function Home() {
                   For any inquiries or assistance, feel free to reach out to us via email at
                 </p>
                 <a href="mailto:contact@aypfinancialsolutions.com" className="text-blue-600 hover:text-blue-800 font-medium">
-                  contact@aypfinancialsolutions.com
+                  info@aypfinance.com
                 </a>
                 <p className="text-gray-600 mt-2">
                   Our team is ready to help you with your financial needs.
@@ -726,10 +651,21 @@ export default function Home() {
                 <p className="text-gray-600 mb-3">
                   You can contact us directly at
                 </p>
-                <p className="text-blue-600 font-medium text-xl">+1-555-123-4567</p>
-                <p className="text-gray-600 mt-2">
-                  Our representatives are available to assist you with any questions or concerns you may have regarding our services.
-                </p>
+                <ul className="text-blue-600 font-medium text-xl list-disc pl-5">
+                  <li className="flex items-center justify-center gap-2">
+                    <span className="text-xl font-bold text-gray-900">Anupam 📞</span>
+                    <span>+91 9711477131</span>
+                  </li>
+                  <li className="flex items-center justify-center gap-2">
+                    <span className="text-xl font-bold text-gray-900">Yugant 📞</span>
+                    <span>+91 7011086155</span>
+                  </li>
+                  <li className="flex items-center justify-center gap-2">
+                    <span className="text-xl font-bold text-gray-900">Praful 📞</span>
+                    <span>+91 9971334676</span>
+                  </li>
+                </ul>
+                
               </div>
 
               {/* Visit Us */}
@@ -748,11 +684,9 @@ export default function Home() {
                   We are located at
                 </p>
                 <p className="text-blue-600 font-medium">
-                  123 Financial Way, Los Angeles, CA 90001, United States
+                  SCO No 46, M3M Galleria Market, Sector 113, Dwarka Expressway
                 </p>
-                <p className="text-gray-600 mt-2">
-                  Feel free to stop by our office for personalized assistance and consultations.
-                </p>
+                
               </div>
             </div>
           </div>
@@ -794,9 +728,7 @@ export default function Home() {
                   {openFAQ === 0 && (
                     <div className="px-5 py-3 bg-white border-t border-gray-200">
                       <p className="text-gray-600 text-sm md:text-base">
-                        We offer a variety of loan products including personal loans, home mortgages, auto loans, 
-                        business loans, and specialized financing options. Our team works to find the best rates 
-                        and terms based on your specific financial situation and goals.
+                        We offer a variety of loan products including personal loans, home loans, car loans, business loans, and specialized financing options. Our team works to find the best rates and terms based on your specific financial situation and goals.
                       </p>
                     </div>
                   )}
@@ -822,10 +754,14 @@ export default function Home() {
                   {openFAQ === 1 && (
                     <div className="px-5 py-3 bg-white border-t border-gray-200">
                       <p className="text-gray-600 text-sm md:text-base">
-                        Our application process is designed to be simple and efficient. It begins with an initial consultation 
-                        where we assess your needs and financial situation. We then help you gather the necessary documentation 
-                        and submit your application to the most suitable lenders. Our team handles the paperwork and negotiations, 
-                        keeping you informed throughout the process until approval and funding.
+                        Our application process is designed to be simple and
+                        efficient. It begins with an initial consultation where
+                        we assess your needs and financial situation. We then
+                        help you gather the necessary documentation and submit
+                        your application to the most suitable lenders. Our team
+                        handles the paperwork and negotiations, keeping you
+                        informed throughout the process until approval and
+                        funding.
                       </p>
                     </div>
                   )}
@@ -837,7 +773,7 @@ export default function Home() {
                     onClick={() => toggleFAQ(2)} 
                     className="flex justify-between items-center w-full px-5 py-3 text-left bg-white hover:bg-gray-50 transition-colors"
                   >
-                    <span className="text-base md:text-lg font-medium text-gray-900">What is your commission structure?</span>
+                    <span className="text-base md:text-lg font-medium text-gray-900">Does AYP provides insurance services too?</span>
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className={`h-5 w-5 text-gray-500 transition-transform duration-300 ${openFAQ === 2 ? 'rotate-180' : ''}`} 
@@ -851,10 +787,9 @@ export default function Home() {
                   {openFAQ === 2 && (
                     <div className="px-5 py-3 bg-white border-t border-gray-200">
                       <p className="text-gray-600 text-sm md:text-base">
-                        We maintain transparent fee structures for all our services. For most loan products, our compensation 
-                        comes from the lenders we work with, meaning there's no direct cost to you for our loan matching services. 
-                        For specialized financial planning services, we offer competitive flat-fee and percentage-based options 
-                        detailed during your initial consultation.
+                        Yes, we provide curated insurance plans for life,
+                          health, and assets—designed to align with your financial
+                          goals and loan protection needs.
                       </p>
                     </div>
                   )}
@@ -875,18 +810,18 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li><a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About Us</a></li>
                   <li><a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</a></li>
-                  <li><a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a></li>
-                  <li><a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li>
+                  {/* <li><a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a></li> */}
+                  {/* <li><a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li> */}
                 </ul>
               </div>
               
               {/* Loans Column */}
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Loans</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Services</h3>
                 <ul className="space-y-3">
-                  <li><Link href="/services/car-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Car Loans</Link></li>
-                  <li><Link href="/services/personal-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Personal Loans</Link></li>
-                  <li><Link href="/services/business-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Business Loans</Link></li>
+                  <li><Link href="/services/car-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Car Loan</Link></li>
+                  <li><Link href="/services/personal-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Personal & Home Loan</Link></li>
+                  <li><Link href="/services/business-loans" className="text-gray-600 hover:text-blue-600 transition-colors">Business Loan</Link></li>
                   <li><Link href="/services/insurance" className="text-gray-600 hover:text-blue-600 transition-colors">Insurance</Link></li>
                 </ul>
               </div>
@@ -895,12 +830,12 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Contact</h3>
                 <ul className="space-y-3">
-                  <li><a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li>
+                  <li><a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a></li>
                 </ul>
               </div>
               
               {/* Subscribe Column */}
-              <div>
+              {/* <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe</h3>
                 <p className="text-gray-600 mb-4">Stay up-to-date with our latest financial solutions and offers.</p>
                 <div className="flex">
@@ -913,7 +848,7 @@ export default function Home() {
                     Subscribe
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             {/* Divider */}
@@ -922,7 +857,7 @@ export default function Home() {
             {/* Bottom Footer */}
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-600 text-sm mb-4 md:mb-0">
-                © 2025 AYP Financial Solutions. All rights reserved.
+                © 2025 AYP Finance Solutions. All rights reserved.
               </div>
               
               <div className="flex items-center space-x-8">
