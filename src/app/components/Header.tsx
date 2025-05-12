@@ -80,14 +80,14 @@ export default function Header({ transparent = false }: HeaderProps) {
           </button>
           <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
             <div className="py-1 divide-y divide-gray-100">
-              <div className="px-4 py-3 bg-gray-50">
+              {/* <div className="px-4 py-3 bg-gray-50">
                 <p className="text-sm font-medium text-gray-800">Loan Services</p>
-              </div>
+              </div> */}
               <div className="py-1">
-                <Link href="/services/car-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Car Loans</Link>
-                <Link href="/services/home-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home Loans</Link>
-                <Link href="/services/personal-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personal Loans</Link>
-                <Link href="/services/business-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Business Loans</Link>
+                <Link href="/services/car-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Car Loan</Link>
+                <Link href="/services/home-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home Loan</Link>
+                <Link href="/services/personal-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Personal Loan</Link>
+                <Link href="/services/business-loans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Business Loan</Link>
                 <Link href="/services/insurance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Insurance</Link>
               </div>
               {/* <div className="px-4 py-3 bg-gray-50">
@@ -132,10 +132,10 @@ export default function Header({ transparent = false }: HeaderProps) {
               <div>
                 <div className="text-gray-900 font-semibold mb-1">Services</div>
                 <div className="flex flex-col space-y-1 pl-2">
-                  <Link href="/services/car-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Car Loans</Link>
-                  <Link href="/services/home-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Home Loans</Link>
-                  <Link href="/services/personal-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Personal Loans</Link>
-                  <Link href="/services/business-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Business Loans</Link>
+                  <Link href="/services/car-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Car Loan</Link>
+                  <Link href="/services/home-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Home Loan</Link>
+                  <Link href="/services/personal-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Personal Loan</Link>
+                  <Link href="/services/business-loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Business Loan</Link>
                   <Link href="/services/insurance" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
                   {/* <Link href="/loans" className="text-gray-700 hover:text-blue-600 py-2 px-2 rounded-lg transition" onClick={() => setMobileMenuOpen(false)}>All Loans</Link> */}
                 </div>

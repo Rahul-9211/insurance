@@ -57,8 +57,10 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-700">+1 (555) 123-4567</p>
-                      <p className="text-gray-500 text-sm mt-1">Monday-Friday, 9am-5pm EST</p>
+                      <p className="text-gray-700">+91 9711477131</p>
+                      <p className="text-gray-700">+91 7011086155</p>
+                      <p className="text-gray-700">+91 9971334676</p>
+                      <p className="text-gray-500 text-sm mt-1">Monday-Sunday, 9am-5pm IST</p>
                     </div>
                   </div>
                   
@@ -72,7 +74,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-700">contact@aypfinancialsolutions.com</p>
+                      <p className="text-gray-700">info@aypfinance.com</p>
                       <p className="text-gray-500 text-sm mt-1">We usually respond within 24 hours</p>
                     </div>
                   </div>
@@ -86,13 +88,13 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">Office</h4>
-                      <p className="text-gray-700">123 Financial Way<br />Los Angeles, CA 90001<br />United States</p>
+                      <p className="text-gray-700">SCO No 46, M3M Galleria Market,<br />Sector 113, Dwarka Expressway</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect With Us</h4>
+                {/* <div className="mt-8 pt-6 border-t border-gray-200"> */}
+                  {/* <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect With Us</h4> */}
                   {/* <div className="flex space-x-4">
                     <a href="#" className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -115,7 +117,7 @@ export default function ContactPage() {
                       </svg>
                     </a>
                   </div> */}
-                </div>
+                {/* </div> */}
               </div>
             </div>
           </div>

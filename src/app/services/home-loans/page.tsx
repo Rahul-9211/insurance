@@ -24,10 +24,10 @@ export default function HomeLoansPage() {
         <div className="relative z-20 flex flex-col h-full w-full justify-center px-6 md:px-12">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-[var(--font-playfair)]">
-              Home Loan Solutions
+              Home Loan
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
-              Turn your dream home into a reality with our customized mortgage solutions
+              Your dream home, financed your way
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function HomeLoansPage() {
               <li><span className="text-gray-500 mx-2">/</span></li>
               <li><Link href="/#services" className="text-blue-600 hover:underline">Services</Link></li>
               <li><span className="text-gray-500 mx-2">/</span></li>
-              <li className="text-gray-700">Home Loans</li>
+              <li className="text-gray-700">Home Loan</li>
             </ol>
           </nav>
         </div>
@@ -55,7 +55,7 @@ export default function HomeLoansPage() {
             {/* Main Content Column */}
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-[var(--font-playfair)]">
-                Home Loan Solutions
+                Home Loan
               </h2>
               
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -65,7 +65,7 @@ export default function HomeLoansPage() {
                 the home loan process simple and affordable.
               </p>
 
-              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Our Home Loan Solutions?</h3>
+              <h3 id="why-choose" className="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Choose Us?</h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -207,58 +207,24 @@ export default function HomeLoansPage() {
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 sticky top-24">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">List of Documents</h3>
-                <nav className="space-y-2">
-                  <a href="#why-choose" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-blue-600 pl-3">
-                    Why Choose Our Home Loan Solutions?
-                  </a>
-                  <a href="#loan-options" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    Our Home Loan Options
-                  </a>
-                  <a href="#loan-process" className="block text-blue-600 hover:text-blue-800 hover:underline py-1 border-l-4 border-transparent hover:border-blue-600 pl-3">
-                    The Home Loan Process
-                  </a>
-                </nav>
-                
-                <div className="mt-8 pt-6 border-t border-gray-300">
-                  <h4 className="font-semibold text-gray-900 mb-2">Need Assistance?</h4>
-                  <p className="text-gray-700 mb-4">
-                    Our mortgage specialists are here to help you find the right home loan solution.
-                  </p>
-                  <a href="tel:+15551234567" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    (555) 123-4567
-                  </a>
-                </div>
-                
-                <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-100">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Mortgage Calculator</h4>
-                  <p className="text-sm text-gray-700 mb-4">
-                    Use our <Link href="/tools/mortgage-calculator" className="text-blue-600 hover:underline">mortgage calculator</Link> to estimate your monthly payments based on loan amount, interest rate, and term.
-                  </p>
-                </div>
-                
-                <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                  <h4 className="font-semibold text-gray-900 mb-2">Quick Links</h4>
-                  <ul className="space-y-1">
-                    <li>
-                      <Link href="/faqs#home-loans" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Home Loan FAQs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/tools/home-buying-guide" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Home Buying Guide
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact" className="text-blue-600 hover:text-blue-800 hover:underline">
-                        Contact a Mortgage Specialist
-                      </Link>
-                    </li>
+                  <ul className="space-y-3 text-gray-800">
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Last 2 years ITR with computation</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Last 6 months bank statement </li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> GST certificate/MSME certificate</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Property paper with full chain</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> One passport size photo</li>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Co-applicant documents</h3>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Aadhar Card</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> Pan Card</li>
+                    <li className="flex items-start"><span className="mt-1 mr-2 text-blue-600">•</span> One passport size photo</li>
                   </ul>
-                </div>
+                
+                
+                
+                
+                
               </div>
             </div>
           </div>
@@ -276,9 +242,9 @@ export default function HomeLoansPage() {
             <Link href="/contact" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
               Contact Us Today
             </Link>
-            <Link href="/tools/mortgage-calculator" className="inline-block bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
+            {/* <Link href="/tools/mortgage-calculator" className="inline-block bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-md transition-colors shadow-md">
               Use Mortgage Calculator
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
