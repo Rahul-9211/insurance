@@ -42,7 +42,7 @@ export default function Header({ transparent = false }: HeaderProps) {
       <div className="flex items-center">
         <Link href="/">
           <div className="h-12 w-auto relative">
-            <svg width="120" height="40" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" className="fill-current">
+            <svg width="160" height="40" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" className="fill-current">
               {/* AYP Boxes */}
               <rect x="20" y="30" width="60" height="60" rx="5" fill="#111" />
               <rect x="90" y="30" width="60" height="60" rx="5" fill="#a81c1c" />
@@ -61,7 +61,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               <text x="250" y="85" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="#a81c1c">SOLUTIONS</text>
               
               {/* Tagline */}
-              <text x="250" y="105" fontFamily="Arial, sans-serif" fontSize="12" fill={transparent && !scrolled ? "#111" : "#111"}>SOLUTIONS YOU CAN BANK ON</text>
+              <text x="20" y="113" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="bold" lengthAdjust="spacing" textLength="390" fill={transparent && !scrolled ? "#111" : "#111"}>SOLUTIONS YOU CAN BANK ON</text>
             </svg>
           </div>
         </Link>
