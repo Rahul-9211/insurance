@@ -164,7 +164,7 @@ export default function PersonalLoansPage() {
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 mt-8">
-                <h3 id="application-process" className="text-xl font-bold text-gray-900 mb-3">How to Apply for a Personal or Home Loan</h3>
+                <h3 id="application-process" className="text-xl font-bold text-gray-900 mb-3">How to Apply for a Personal Loan</h3>
                 <ol className="space-y-4 text-gray-700">
                   <li className="flex">
                     <span className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">1</span>
