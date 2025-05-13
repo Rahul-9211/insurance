@@ -134,9 +134,9 @@ export default function Home() {
                   
                   {/* Stat 4 */}
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">10</h3>
-                    <p className="text-xl font-medium text-gray-800 mb-1">awards</p>
-                    <p className="text-gray-600">We've received 10 industry awards for excellence in financial services.</p>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-2">₹6 CR+</h3>
+                    <p className="text-xl font-medium text-gray-800 mb-1">amount sanctioned</p>
+                    <p className="text-gray-600">Loans worth over ₹6 crore successfully sanctioned.</p>
                   </div>
                 </div>
               </div>
@@ -623,7 +623,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Ankita Pandey</h4>
+                      <h4 className="font-bold text-white">Ankit Pandey</h4>
                       <p className="text-blue-300">Personal Loan</p>
                     </div>
                   </div>
@@ -681,8 +681,8 @@ export default function Home() {
                 <p className="text-gray-600 mb-3">
                   For any inquiries or assistance, feel free to reach out to us via email at
                 </p>
-                <a href="mailto:contact@aypfinancialsolutions.com" className="text-blue-600 hover:text-blue-800 font-medium">
-                  info@aypfinance.com
+                <a href="mailto:aypfinancesolutions@gmail.com" className="text-blue-600 hover:text-blue-800 font-medium">
+                  aypfinancesolutions@gmail.com
                 </a>
                 <p className="text-gray-600 mt-2">
                   Our team is ready to help you with your financial needs.
@@ -705,16 +705,19 @@ export default function Home() {
                 </p>
                 <ul className="text-blue-600 font-medium text-xl list-disc pl-5">
                   <li className="flex items-center justify-center gap-2">
-                    <span className="text-xl font-bold text-gray-900">Anupam 📞</span>
-                    <span>+91 9711477131</span>
+                    {/* <span className="text-xl font-bold text-gray-900">📞</span> */}
+                    <a href="tel:+919711477131" className="hover:underline">+91 9711477131</a>  
+                    <span className="text-gray-600 text-sm">(Anupam)</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <span className="text-xl font-bold text-gray-900">Yugant 📞</span>
-                    <span>+91 7011086155</span>
+                    {/* <span className="text-xl font-bold text-gray-900">Yugant 📞</span> */}
+                    <a href="tel:+917011086155" className="hover:underline">+91 7011086155</a>
+                    <span className="text-gray-600 text-sm">(Yugant)</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <span className="text-xl font-bold text-gray-900">Praful 📞</span>
-                    <span>+91 9971334676</span>
+                    {/* <span className="text-xl font-bold text-gray-900">Praful 📞</span> */}
+                    <a href="tel:+919971334676" className="hover:underline">+91 9971334676</a>
+                    <span className="text-gray-600 text-sm">(Praful)</span>
                   </li>
                 </ul>
                 
