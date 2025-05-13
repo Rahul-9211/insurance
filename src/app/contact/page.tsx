@@ -57,9 +57,9 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-700">+91 9711477131</p>
-                      <p className="text-gray-700">+91 7011086155</p>
-                      <p className="text-gray-700">+91 9971334676</p>
+                      <a href="tel:+919711477131" className="hover:underline">+91 9711477131</a> <br />
+                      <a href="tel:+917011086155" className="hover:underline">+91 7011086155</a><br />
+                      <a href="tel:+919971334676" className="hover:underline">+91 9971334676</a>
                       <p className="text-gray-500 text-sm mt-1">Monday-Sunday, 9am-5pm IST</p>
                     </div>
                   </div>
@@ -74,7 +74,9 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-700">info@aypfinance.com</p>
+                      <a href="mailto:aypfinancesolutions@gmail.com" className="text-gray-600 hover:text-gray-800 font-medium">
+                        aypfinancesolutions@gmail.com
+                      </a>
                       <p className="text-gray-500 text-sm mt-1">We usually respond within 24 hours</p>
                     </div>
                   </div>
