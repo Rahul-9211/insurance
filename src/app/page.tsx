@@ -716,7 +716,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     {/* <span className="text-xl font-bold text-gray-900">Praful 📞</span> */}
-                    <a href="tel:+919971334676" className="hover:underline">+91 9971334676</a>
+                    <a href="tel:+919971334676" className="hover:underline">+91 9818283322</a>
                     <span className="text-gray-600 text-sm">(Praful)</span>
                   </li>
                 </ul>
