@@ -49,7 +49,7 @@ export default function ContactPage() {
                 
                 <div className="space-y-6">
                   {/* Phone */}
-                  <div className="flex items-start">
+                  {/* <div className="flex items-start">
                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -62,7 +62,7 @@ export default function ContactPage() {
                       <a href="tel:+919971334676" className="hover:underline">+91 9818283322</a>
                       <p className="text-gray-500 text-sm mt-1">Monday-Sunday, 9am-5pm IST</p>
                     </div>
-                  </div>
+                  </div> */}
                   
                   {/* Email */}
                   <div className="flex items-start">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                   </div>
                   
                   {/* Address */}
-                  <div className="flex items-start">
+                  {/* <div className="flex items-start">
                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -92,7 +92,7 @@ export default function ContactPage() {
                       <h4 className="text-lg font-semibold text-gray-900">Office</h4>
                       <p className="text-gray-700">SCO No 46, M3M Galleria Market,<br />Sector 113, Dwarka Expressway</p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 
                 {/* <div className="mt-8 pt-6 border-t border-gray-200"> */}

@@ -665,7 +665,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-10">
               {/* Email Contact */}
               <div className="text-center">
                 <div className="flex justify-center mb-4">
@@ -690,10 +690,9 @@ export default function Home() {
               </div>
 
               {/* Phone Contact */}
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-4 rounded-full bg-gray-100">
-                    {/* Modern Phone Icon */}
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
@@ -705,29 +704,25 @@ export default function Home() {
                 </p>
                 <ul className="text-blue-600 font-medium text-xl list-disc pl-5">
                   <li className="flex items-center justify-center gap-2">
-                    {/* <span className="text-xl font-bold text-gray-900">📞</span> */}
                     <a href="tel:+919711477131" className="hover:underline">+91 9711477131</a>  
                     <span className="text-gray-600 text-sm">(Anupam)</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    {/* <span className="text-xl font-bold text-gray-900">Yugant 📞</span> */}
                     <a href="tel:+917011086155" className="hover:underline">+91 7011086155</a>
                     <span className="text-gray-600 text-sm">(Yugant)</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    {/* <span className="text-xl font-bold text-gray-900">Praful 📞</span> */}
                     <a href="tel:+919971334676" className="hover:underline">+91 9818283322</a>
                     <span className="text-gray-600 text-sm">(Praful)</span>
                   </li>
                 </ul>
                 
-              </div>
+              </div> */}
 
               {/* Visit Us */}
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-4 rounded-full bg-gray-100">
-                    {/* Modern MapPin Icon */}
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 21c-4.418 0-8-4.03-8-9a8 8 0 1116 0c0 4.97-3.582 9-8 9z" fill="white" />
                       <circle cx="12" cy="12" r="3" fill="#3b82f6" />
@@ -742,7 +737,7 @@ export default function Home() {
                   SCO No 46, M3M Galleria Market, Sector 113, Dwarka Expressway
                 </p>
                 
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
