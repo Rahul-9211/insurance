@@ -175,7 +175,7 @@ export default function ContactForm() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            className={`w-full px-4 py-3 rounded-md border text-black ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
             placeholder="John Doe"
           />
           {errors.name && <p className="mt-1 text-red-500 text-sm">{errors.name}</p>}
@@ -191,7 +191,7 @@ export default function ContactForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            className={`w-full px-4 py-3 rounded-md border text-black ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
             placeholder="john.doe@example.com"
           />
           {errors.email && <p className="mt-1 text-red-500 text-sm">{errors.email}</p>}
@@ -207,7 +207,7 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            className={`w-full px-4 py-3 rounded-md border text-black ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
             placeholder="(555) 123-4567"
           />
           {errors.phone && <p className="mt-1 text-red-500 text-sm">{errors.phone}</p>}
@@ -222,7 +222,7 @@ export default function ContactForm() {
             name="requirement"
             value={formData.requirement}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-md border ${errors.requirement ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            className={`w-full px-4 py-3 rounded-md border text-black ${errors.requirement ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
           >
             <option value="">Select Requirement</option>
             <option value="Home Loan">Home Loan</option>
@@ -244,7 +244,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             rows={4}
-            className={`w-full px-4 py-3 rounded-md border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            className={`w-full px-4 py-3 rounded-md border text-black ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
             placeholder="How can we help you?"
           />
           {errors.message && <p className="mt-1 text-red-500 text-sm">{errors.message}</p>}
