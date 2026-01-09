@@ -20,6 +20,7 @@ export default function ContactForm() {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -96,11 +97,30 @@ export default function ContactForm() {
     }
     
     setIsSubmitting(true);
+    setSubmitError("");
+    setSubmitSuccess(false);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          contactNumber: formData.phone, // Map phone to contactNumber for API
+          requirement: formData.requirement,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || data.details || 'Failed to submit form');
+      }
+
       // Reset form after successful submission
       setFormData({
         name: "",
@@ -118,6 +138,11 @@ export default function ContactForm() {
       }, 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmitError(
+        error instanceof Error 
+          ? error.message 
+          : 'Failed to submit form. Please try again later.'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -130,6 +155,12 @@ export default function ContactForm() {
       {submitSuccess && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md text-green-700">
           Thank you for your message! We'll get back to you shortly.
+        </div>
+      )}
+      
+      {submitError && (
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md text-red-700">
+          {submitError}
         </div>
       )}
       
